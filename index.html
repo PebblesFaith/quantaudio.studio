@@ -1,26 +1,113 @@
 <!doctype html>
 <html lang="en">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Quantaudio Studio — Soundtrack for the Soul</title>
-<link rel="icon" href="/favicon.ico">
-<style>
-  body{font-family:system-ui, -apple-system, Segoe UI, Roboto, Inter, sans-serif; margin:0; padding:48px 16px; color:#6F615D; background:#fff;}
-  .wrap{max-width:880px; margin:0 auto; text-align:center;}
-  h1{font-size:40px; letter-spacing:.5px; margin:16px 0 8px}
-  p.lead{font-size:18px; opacity:.85; margin:0 0 24px}
-  .btns a{display:inline-block; margin:8px 10px; padding:12px 18px; border:1.5px solid #6F615D; border-radius:999px; color:#6F615D; text-decoration:none}
-  .btns a:hover{background:#6F615D; color:#fff}
-  footer{margin-top:36px; font-size:14px; opacity:.7}
-</style>
-<div class="wrap">
-  <h1>QUANTAUDIO STUDIO</h1>
-  <p class="lead">Scripture-Inspired. Cinematic.</p>
-  <div class="btns">
-    <a href="https://youtube.com/@QuantaudioStudio" target="_blank" rel="noopener">Listen</a>
-    <a href="/license">License</a>
-    <a href="/qa">QA</a>
-    <a href="/links">Links</a>
-  </div>
-  <footer>© Quantaudio Studio</footer>
-</div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Quantaudio Studio — Scripture-Inspired. Cinematic.</title>
+  <meta name="description" content="Quantaudio Studio creates scripture-inspired cinematic music. Listen, license, and explore QA prompts rooted in the Bible.">
+
+  <!-- Canonical & theme -->
+  <link rel="canonical" href="https://quantaudio.studio/">
+  <meta name="theme-color" content="#6F615D">
+
+  <!-- Favicon / app icons (add these files when ready) -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Quantaudio Studio — Scripture-Inspired. Cinematic.">
+  <meta property="og:description" content="Cinematic worship and devotional instrumentals. Listen, license, and explore QA prompts.">
+  <meta property="og:url" content="https://quantaudio.studio/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://quantaudio.studio/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <style>
+    :root{
+      --taupe:#6F615D;      /* brand color */
+      --bg:#ffffff;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+      color:var(--taupe); background:var(--bg);
+      display:flex; align-items:center; justify-content:center;
+    }
+    .wrap{
+      width:100%; max-width:1060px; padding:48px 16px; text-align:center;
+    }
+    /* Brand logo */
+    .brand{margin:0 auto 18px; display:flex; justify-content:center; align-items:center}
+    .brand img{
+      width:min(96vw, 980px); height:auto; display:block;
+    }
+
+    h1{
+      font-size:40px; letter-spacing:.6px; margin:10px 0 6px;
+      text-transform:uppercase;
+    }
+    .lead{font-size:18px; opacity:.9; margin:0 0 28px}
+
+    /* Buttons */
+    .btns{display:flex; gap:14px; justify-content:center; flex-wrap:wrap}
+    .btn{
+      display:inline-block; padding:12px 18px; border-radius:999px;
+      border:1.6px solid var(--taupe); color:var(--taupe); text-decoration:none;
+      transition:.15s ease-in-out;
+    }
+    .btn:hover,.btn:focus{background:var(--taupe); color:#fff; outline:none}
+
+    footer{margin-top:40px; font-size:14px; opacity:.72}
+
+    @media (max-width:640px){
+      h1{font-size:30px}
+      .lead{font-size:16px}
+    }
+  </style>
+
+  <!-- Structured data (Organization) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Quantaudio Studio",
+    "url": "https://quantaudio.studio/",
+    "logo": "https://quantaudio.studio/quantaudio-logo.svg",
+    "sameAs": [
+      "https://youtube.com/@QuantaudioStudio",
+      "https://www.instagram.com/quantaudiostudio",
+      "https://www.tiktok.com/@quantaudiostudio",
+      "https://www.patreon.com/QuantaudioStudio"
+    ],
+    "email": "hello@quantaudio.studio"
+  }
+  </script>
+</head>
+<body>
+  <main class="wrap">
+    <!-- LOGO -->
+    <div class="brand" aria-label="Quantaudio Studio logo">
+      <!-- Prefer SVG for sharpness; PNG will also work. Keep one of these lines. -->
+      <img src="/quantaudio-logo.svg" alt="Quantaudio Studio logo with musical motif"
+           onerror="this.onerror=null;this.src='/quantaudio-logo.png';">
+    </div>
+
+    <h1>Quantaudio Studio</h1>
+    <p class="lead">Scripture-Inspired. Cinematic.</p>
+
+    <nav class="btns" aria-label="Primary">
+      <a class="btn" href="https://youtube.com/@QuantaudioStudio" target="_blank" rel="noopener">Listen</a>
+      <a class="btn" href="/license">License</a>
+      <a class="btn" href="/qa">QA</a>
+      <a class="btn" href="/links">Links</a>
+    </nav>
+
+    <footer>© Quantaudio Studio</footer>
+  </main>
+
+  <noscript>JavaScript is disabled; links remain fully functional.</noscript>
+</body>
+</html>
