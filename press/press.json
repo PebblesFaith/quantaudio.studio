@@ -1,0 +1,43 @@
+{
+  "name": "Quantaudio Studio",
+  "tagline": "Scripture-Inspired. Cinematic.",
+  "one_liner": "Cinematic devotionals and worship instrumentals shaped by Scripture.",
+  "description": "Quantaudio Studio composes Bible-anchored, cinematic music designed for prayer, study, and reflection. Sessions are guided by QA prompts—succinct, scriptural cues that keep the listener in the text.",
+  "qa_mark_meaning": "QA denotes scriptural—Bible-rooted prompts embedded in each work.",
+  "location": "United States",
+  "founded": "2025",
+  "contact": {
+    "email": "hello@quantaudio.studio",
+    "site": "https://quantaudio.studio/",
+    "press_request": "mailto:hello@quantaudio.studio?subject=Press%20Inquiry%20-%20Quantaudio%20Studio"
+  },
+  "social": {
+    "youtube": "https://youtube.com/@QuantaudioStudio",
+    "instagram": "https://www.instagram.com/quantaudiostudio",
+    "tiktok": "https://www.tiktok.com/@quantaudiostudio",
+    "patreon": "https://www.patreon.com/QuantaudioStudio"
+  },
+  "series_highlight": {
+    "title": "Trade What Fades",
+    "sessions": ["IX","X","XI","XII","XIII","XIV","XV"]
+  },
+  "credit_line": "Music by Quantaudio Studio",
+  "licensing": "https://quantaudio.studio/license",
+  "brand": {
+    "colors": {
+      "taupe": "#6F615D",
+      "note_blue": "#8FA8B8",
+      "note_lavender": "#B9A9C9",
+      "note_gold": "#D8B56A",
+      "note_teal": "#7FAE9B"
+    },
+    "logos": {
+      "svg": "/quantaudio-logo.svg",
+      "wide_svg": "/quantaudio-logo-wide.svg",
+      "png_1600": "/assets/brand/quantaudio-logo-1600.png"
+    },
+    "usage": "Keep ample whitespace around the wordmark and motif. Do not recolor the wordmark; use brand taupe on light backgrounds."
+  },
+  "copyright": "© Quantaudio Studio. “™” denotes an unregistered mark.",
+  "last_updated": "2025-11-07"
+}
