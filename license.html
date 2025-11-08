@@ -255,11 +255,8 @@
     const email  = document.getElementById('email');
 
     if (!form) return;
-
-    // Keep Reply-To synced
     if (email && replyTo) email.addEventListener('input', () => replyTo.value = email.value);
 
-    // Hard require: disable button until valid, highlight invalid fields
     const requiredFields = Array.from(form.querySelectorAll('[required]'));
     function validateAll(){
       let allValid = true;
@@ -275,9 +272,7 @@
     form.addEventListener('blur', validateAll, true);
     window.addEventListener('load', validateAll);
 
-    // Submit with better errors
     form.addEventListener('submit', async (e) => {
-      // If invalid, let browser show tooltips and stop
       if(!form.checkValidity()){
         validateAll();
         e.preventDefault();
@@ -285,7 +280,6 @@
         status.textContent = 'Please complete all required fields.';
         return;
       }
-      // AJAX path
       e.preventDefault();
       status.className = 'status';
       status.textContent = 'Sending…';
@@ -298,6 +292,9 @@
         });
         let data = {};
         try { data = await resp.json(); } catch(_) {}
+
+        console.log('Formspree response', resp.status, data);
+
         if (resp.ok) {
           form.reset();
           validateAll();
@@ -305,14 +302,16 @@
           status.textContent = 'Thanks — we received your request. We’ll reply to your email.';
         } else {
           status.className = 'status err';
-          status.textContent = (data && data.errors && data.errors.length)
-            ? data.errors.map(e => e.message).join(' ')
-            : (resp.status === 404
-              ? 'Form endpoint not found. Check the Formspree form ID in the <form action> URL.'
-              : 'Sorry, something went wrong. Please use the Email Instead button.');
+          status.textContent =
+            (data && data.errors && data.errors.length)
+              ? data.errors.map(e => e.message).join(' ')
+              : (resp.status === 404
+                  ? 'Form endpoint not found. Check the Formspree form ID in the <form action> URL.'
+                  : `Submit failed (HTTP ${resp.status}). Please use the Email Instead button.`);
           submit.disabled = false;
         }
       }catch(err){
+        console.error('Formspree network error', err);
         status.className = 'status err';
         status.textContent = 'Network error. Please use the Email Instead button.';
         submit.disabled = false;
@@ -320,5 +319,6 @@
     });
   })();
 </script>
+
 </body>
 </html>
