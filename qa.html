@@ -3,28 +3,17 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>QA — denotes scriptural | Quantaudio Studio™</title>
-<meta name="description" content="QA denotes scriptural. Bible-anchored prompts that inspire Quantaudio Studio’s scripture-inspired, cinematic music.">
+<meta name="description" content="QA denotes scriptural. Bible-anchored prompts behind Quantaudio Studio’s 'Trade What Fades' sessions.">
 <link rel="canonical" href="https://quantaudio.studio/qa">
 <meta name="theme-color" content="#6F615D">
 
 <style>
-  /* ========= Brand Palette (all text = taupe) ========= */
   :root{
-    --taupe:#6F615D;  /* primary brand/text */
-    --ink:#6F615D;    /* headings = taupe */
-
-    /* soft accent hues sampled from the logo */
-    --note-blue:#8FA8B8;
-    --note-lav:#B9A9C9;
-    --note-gold:#D8B56A;
-    --note-teal:#7FAE9B;
-
-    --bg:#ffffff;
-    --ring: color-mix(in oklab, var(--taupe) 65%, #fff);
-    --shadow: 0 6px 20px rgba(0,0,0,.06);
-    --radius: 18px;
+    --taupe:#6F615D;
+    --note-blue:#8FA8B8; --note-lav:#B9A9C9; --note-gold:#D8B56A; --note-teal:#7FAE9B;
+    --bg:#ffffff; --ring: color-mix(in oklab, var(--taupe) 65%, #fff);
+    --shadow: 0 6px 20px rgba(0,0,0,.06); --radius:18px;
   }
-
   *{box-sizing:border-box}
   html,body{height:100%}
   body{
@@ -32,144 +21,131 @@
     font-family:system-ui,-apple-system,"Segoe UI",Roboto,Inter,Arial,sans-serif;
     display:flex; align-items:flex-start; justify-content:center;
   }
+  main.wrap{width:100%;max-width:1100px;margin:40px auto;padding:0 16px 56px}
 
-  main.wrap{ width:100%; max-width:1100px; margin:40px auto; padding:0 16px 56px; }
+  .brandlock{display:flex;align-items:center;justify-content:center;gap:16px;margin:6px auto 6px}
+  .brandlock img{width:min(140px,45vw);height:auto;display:block;filter:drop-shadow(0 2px 6px rgba(0,0,0,.08))}
+  h1{margin:10px 0 4px;text-align:center;font-size:clamp(28px,3.4vw,38px)}
+  p.lead{margin:0 auto 24px;text-align:center;max-width:60ch;opacity:.9}
 
-  /* ===== Header / Lockup ===== */
-  .brandlock{
-    display:flex; align-items:center; justify-content:center; gap:16px;
-    margin:6px auto 6px;
-  }
-  .brandlock img{ width:min(140px,45vw); height:auto; display:block; filter:drop-shadow(0 2px 6px rgba(0,0,0,.08)); }
+  .rule{width:min(680px,90%);margin:18px auto 14px;height:10px;
+    background:radial-gradient(var(--taupe) 1px,transparent 2px) repeat-x;
+    background-size:12px 10px;background-position:center;opacity:.35}
 
-  h1{
-    margin:10px 0 4px; text-align:center;
-    font-size:clamp(28px,3.4vw,38px); color:inherit; letter-spacing:.2px;
-  }
-  p.lead{ margin:0 auto 24px; text-align:center; max-width:60ch; opacity:.9; color:inherit; }
+  .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin:22px auto 10px;max-width:1100px}
+  .col{grid-column:span 6}
+  @media (max-width:980px){.col{grid-column:span 6}}
+  @media (max-width:640px){.col{grid-column:1 / -1}}
 
-  /* ===== Decorative dotted rule ===== */
-  .rule{
-    width:min(680px,90%); margin:18px auto 14px; height:10px;
-    background:radial-gradient(var(--taupe) 1px, transparent 2px) repeat-x;
-    background-size:12px 10px; background-position:center; opacity:.35;
-  }
-
-  /* ===== Responsive Grid ===== */
-  .grid{
-    display:grid; grid-template-columns:repeat(12,1fr);
-    gap:16px; margin:22px auto 10px; max-width:1100px;
-  }
-  .col{ grid-column:span 6; }
-  @media (max-width:980px){ .col{ grid-column:span 6; } }
-  @media (max-width:640px){ .col{ grid-column:1 / -1; } }
-
-  /* ===== Cards (tinted fills + matching accent borders) ===== */
   .card{
-    border:1.6px solid transparent; border-radius:var(--radius);
-    box-shadow:var(--shadow); padding:18px 18px 16px; position:relative; color:inherit;
-    background:linear-gradient(180deg,#fff,#fff) padding-box;
+    border:1.6px solid transparent;border-radius:var(--radius);
+    box-shadow:var(--shadow);padding:18px 18px 16px;position:relative;
+    background:linear-gradient(180deg,#fff,#fff) padding-box;color:inherit
   }
-  .card h2{ margin:2px 0 8px; font-size:20px; color:inherit; }
-  .card p{ margin:8px 0 0; }
-  .card ol, .card ul{ margin:10px 0 0 18px; }
-  .tag{
-    display:inline-block; margin-left:8px; font-size:12px; font-weight:700; letter-spacing:.2px;
-    color:inherit; background:color-mix(in oklab,var(--note-gold) 22%, #fff);
-    border:1px solid var(--ring); padding:3px 8px; border-radius:999px;
-  }
+  .card h2{margin:2px 0 8px;font-size:20px}
+  .card p{margin:8px 0 0}
+  .card ol,.card ul{margin:10px 0 0 18px}
+  .tag{display:inline-block;margin-left:8px;font-size:12px;font-weight:700;letter-spacing:.2px;
+    background:color-mix(in oklab,var(--note-gold) 22%,#fff);border:1px solid var(--ring);
+    padding:3px 8px;border-radius:999px}
+
   .tinted-gold{
     background:
-      linear-gradient(180deg, color-mix(in oklab, var(--note-gold) 16%, #fff) 0%, #fff 85%) padding-box,
-      linear-gradient(120deg, var(--note-gold), #ffffff) border-box;
+      linear-gradient(180deg,color-mix(in oklab,var(--note-gold) 16%,#fff) 0%,#fff 85%) padding-box,
+      linear-gradient(120deg,var(--note-gold),#ffffff) border-box;
   }
   .tinted-blue{
     background:
-      linear-gradient(180deg, color-mix(in oklab, var(--note-blue) 16%, #fff) 0%, #fff 85%) padding-box,
-      linear-gradient(120deg, var(--note-blue), #ffffff) border-box;
+      linear-gradient(180deg,color-mix(in oklab,var(--note-blue) 16%,#fff) 0%,#fff 85%) padding-box,
+      linear-gradient(120deg,var(--note-blue),#ffffff) border-box;
   }
   .tinted-lav{
     background:
-      linear-gradient(180deg, color-mix(in oklab, var(--note-lav) 16%, #fff) 0%, #fff 85%) padding-box,
-      linear-gradient(120deg, var(--note-lav), #ffffff) border-box;
+      linear-gradient(180deg,color-mix(in oklab,var(--note-lav) 16%,#fff) 0%,#fff 85%) padding-box,
+      linear-gradient(120deg,var(--note-lav),#ffffff) border-box;
   }
   .tinted-teal{
     background:
-      linear-gradient(180deg, color-mix(in oklab, var(--note-teal) 16%, #fff) 0%, #fff 85%) padding-box,
-      linear-gradient(120deg, var(--note-teal), #ffffff) border-box;
+      linear-gradient(180deg,color-mix(in oklab,var(--note-teal) 16%,#fff) 0%,#fff 85%) padding-box,
+      linear-gradient(120deg,var(--note-teal),#ffffff) border-box;
   }
 
-  /* ===== Buttons ===== */
-  .toolbar{ display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin:20px 0 8px; }
-  .btn{
-    display:inline-block; padding:10px 16px; border-radius:999px; text-decoration:none;
-    border:1.6px solid var(--taupe); color:var(--taupe); background:#fff;
-    transition:background .15s ease-in-out, color .15s ease-in-out, border-color .15s ease-in-out;
-  }
-  .btn:hover,.btn:focus{ background:var(--taupe); color:#fff; outline:none; }
-
-  .home{ margin-top:16px; text-align:center }
-  .small{ opacity:.75; font-size:.95rem; }
-  code{ background:#f6f6f6; padding:2px 6px; border-radius:6px; }
+  .toolbar{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:20px 0 8px}
+  .btn{display:inline-block;padding:10px 16px;border-radius:999px;text-decoration:none;
+    border:1.6px solid var(--taupe);color:var(--taupe);background:#fff;
+    transition:background .15s,color .15s,border-color .15s}
+  .btn:hover,.btn:focus{background:var(--taupe);color:#fff;outline:none}
+  .home{margin-top:16px;text-align:center}
+  .small{opacity:.75;font-size:.95rem}
+  .meta{opacity:.8;font-size:.92rem;margin-top:8px}
 </style>
 </head>
 <body>
 <main class="wrap">
 
-  <!-- Mini lockup: logo above headline (safe fallback) -->
+  <!-- Logo (safe fallback) -->
   <div class="brandlock">
     <img src="/quantaudio-logo.svg" alt="Quantaudio Studio logo"
          onerror="this.onerror=null;this.src='/quantaudio-logo-wide.svg';">
   </div>
 
   <h1>QA — denotes scriptural</h1>
-  <p class="lead">In Quantaudio Studio, “QA” signals Bible-anchored prompts that shape our sessions—simple, clear questions that help you listen, respond, and walk it out.</p>
+  <p class="lead">Current focus: <strong>Trade What Fades</strong> — Bible-anchored prompts that shape each session.</p>
 
   <div class="rule" aria-hidden="true"></div>
 
-  <!-- Grid -->
   <section class="grid" aria-label="QA content">
-    <!-- Weekly Prompt -->
+    <!-- Weekly Spotlight (replaces generic Weekly Prompt) -->
     <article class="card tinted-gold col">
-      <h2>Weekly Prompt <span class="tag">New</span></h2>
-      <p><strong>“This is the way; walk in it.”</strong> — Isaiah 30:21</p>
-      <p>Where do you need God’s guidance this week? Name one small, faithful step you can take in that direction.</p>
+      <h2>Weekly Spotlight <span class="tag">Now</span></h2>
+      <p class="meta">Featuring two fast-rising sessions this week.</p>
+      <ul>
+        <li><strong>Session XI — Good Foundation</strong> · <em>1 Timothy 6:19</em> — “Lay hold of life that is truly life.”<br>
+            Track: Instrumental 13th Version</li>
+        <li><strong>Session XIV — Earthen Vessels</strong> · <em>2 Corinthians 4:7</em> — “Treasure in jars of clay.”<br>
+            Track: Instrumental 17th Version (vocal + lyric display)</li>
+      </ul>
       <div class="toolbar">
-        <a class="btn" href="https://www.youtube.com/watch?v=hKtHEgWLlgE&list=PLUwYb7TF1L2M_tzAOu8Zogn8pbaze56hG&index=2" target="_blank" rel="noopener">Listen to Sessions</a>
+        <a class="btn" href="https://youtube.com/@QuantaudioStudio" target="_blank" rel="noopener">Listen on YouTube</a>
+        <a class="btn" href="/license">License Music</a>
       </div>
     </article>
 
-    <!-- Study Flow -->
+    <!-- Study Flow (kept) -->
     <article class="card tinted-blue col">
       <h2>Study Flow</h2>
       <ol>
         <li>Read the scripture slowly, twice.</li>
-        <li>Note a word/phrase that stands out.</li>
+        <li>Note a word or phrase that stands out.</li>
         <li>Pray it back to God; ask for clarity.</li>
         <li>Write one action step; do it today.</li>
       </ol>
     </article>
 
-    <!-- Verse Archive / Examples -->
+    <!-- Verse Archive (updated to your list) -->
     <article class="card tinted-lav col">
-      <h2>Verse Archive</h2>
+      <h2>Verse Archive — Trade What Fades (Week)</h2>
       <ul>
-        <li>Exodus 13:21 — Pillar of Cloud, Pillar of Fire</li>
-        <li>Isaiah 30:21 — This is the Way</li>
-        <li>John 10:27 — My Sheep Hear My Voice</li>
+        <li>🎵 <strong>Session IX — Good Foundation</strong> (10-19-25) — <em>1 Timothy 6:19</em> · Lay hold of true life. — Track: Instrumental 10th Version</li>
+        <li>🎵 <strong>Session X — Pearl of Great Price</strong> (10-19-25) — <em>Matthew 13:45–46</em> · One pearl worth everything. — Track: Instrumental 11th Version</li>
+        <li>🎵 <strong>Session XI — Instruction over Silver</strong> (10-20-25) — <em>Proverbs 8:10–11</em> · Prefer instruction to gold. — Track: Instrumental 13th Version</li>
+        <li>🎵 <strong>Session XII — More Precious Than Rubies (Selah)</strong> (10-20-25) — <em>Proverbs 3:13–15</em> · Wisdom outperforms wealth. — Track: Instrumental 12th Version</li>
+        <li>🎵 <strong>Session XIII — Sweeter Than Honey</strong> (10-21-25) — <em>Psalm 19:9–10</em> · Judgments rich and sweet. — Track: Instrumental 14th Version</li>
+        <li>🎵 <strong>Session XIV — Earthen Vessels</strong> (10-21-25) — <em>2 Corinthians 4:7</em> · Treasure in jars of clay. — Track: Instrumental 17th Version</li>
+        <li>🎵 <strong>Session XV — Heaven’s Vault</strong> (10-22-25) — <em>Matthew 6:19–20</em> · Store treasure where moth can’t reach. — Track: Instrumental 15th Version</li>
       </ul>
       <div class="toolbar">
-        <a class="btn" href="/links">More Links</a>
+        <a class="btn" href="https://youtube.com/@QuantaudioStudio" target="_blank" rel="noopener">Watch Playlist</a>
       </div>
     </article>
 
-    <!-- About QA / Credit -->
+    <!-- About QA -->
     <article class="card tinted-teal col">
       <h2>About “QA”</h2>
-      <p>“QA” denotes scriptural: Bible-rooted questions and answers embedded across our work. You’ll see the QA mark on videos, cards, and descriptions.</p>
-      <p class="small"><em>Credit guidance:</em> “Music by Quantaudio Studio”</p>
+      <p>“QA” denotes scriptural—succinct, Bible-rooted questions and answers embedded across our work. You’ll see the QA mark on videos, cards, and descriptions.</p>
+      <p class="small"><em>Credit guidance:</em> “Music by Quantaudio Studio”.</p>
       <div class="toolbar">
-        <a class="btn" href="/license">License Music</a>
+        <a class="btn" href="/links">Links</a>
       </div>
     </article>
   </section>
