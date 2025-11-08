@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Links | Quantaudio Studio™</title>
+<meta name="description" content="All Quantaudio Studio links in one place — listen, license, socials, QA prompts, and contact.">
+<link rel="canonical" href="https://quantaudio.studio/links">
+<meta name="theme-color" content="#6F615D">
+
+<style>
+  :root{
+    --taupe:#6F615D;
+    --note-blue:#8FA8B8; --note-lav:#B9A9C9; --note-gold:#D8B56A; --note-teal:#7FAE9B;
+    --bg:#ffffff; --ring: color-mix(in oklab, var(--taupe) 65%, #fff);
+    --shadow: 0 6px 20px rgba(0,0,0,.06); --radius:18px;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--taupe);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Inter,Arial,sans-serif;
+    display:flex; align-items:flex-start; justify-content:center;
+  }
+  main.wrap{width:100%;max-width:1100px;margin:40px auto;padding:0 16px 56px}
+
+  /* Header lockup */
+  .brandlock{display:flex;align-items:center;justify-content:center;gap:16px;margin:6px auto 6px}
+  .brandlock img{width:min(140px,45vw);height:auto;display:block;filter:drop-shadow(0 2px 6px rgba(0,0,0,.08))}
+  h1{margin:10px 0 4px;text-align:center;font-size:clamp(28px,3.4vw,38px)}
+  p.lead{margin:0 auto 22px;text-align:center;max-width:60ch;opacity:.9}
+
+  /* Dotted rule */
+  .rule{width:min(680px,90%);margin:18px auto 14px;height:10px;
+    background:radial-gradient(var(--taupe) 1px, transparent 2px) repeat-x;
+    background-size:12px 10px;background-position:center;opacity:.35}
+
+  /* Grid + cards */
+  .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin:22px auto 10px;max-width:1100px}
+  .col{grid-column:span 6}
+  .col-12{grid-column:1 / -1}
+  @media (max-width:980px){.col{grid-column:span 6}}
+  @media (max-width:640px){.col,.col-12{grid-column:1 / -1}}
+
+  .card{
+    border:1.6px solid transparent;border-radius:var(--radius);
+    box-shadow:var(--shadow);padding:18px 18px 18px;position:relative;
+    background:linear-gradient(180deg,#fff,#fff) padding-box;color:inherit
+  }
+  .card h2{margin:2px 0 10px;font-size:20px}
+  .card p{margin:8px 0 0}
+
+  .tinted-gold{
+    background:
+      linear-gradient(180deg, color-mix(in oklab, var(--note-gold) 16%, #fff) 0%, #fff 85%) padding-box,
+      linear-gradient(120deg, var(--note-gold), #ffffff) border-box;
+  }
+  .tinted-blue{
+    background:
+      linear-gradient(180deg, color-mix(in oklab, var(--note-blue) 16%, #fff) 0%, #fff 85%) padding-box,
+      linear-gradient(120deg, var(--note-blue), #ffffff) border-box;
+  }
+  .tinted-lav{
+    background:
+      linear-gradient(180deg, color-mix(in oklab, var(--note-lav) 16%, #fff) 0%, #fff 85%) padding-box,
+      linear-gradient(120deg, var(--note-lav), #ffffff) border-box;
+  }
+  .tinted-teal{
+    background:
+      linear-gradient(180deg, color-mix(in oklab, var(--note-teal) 16%, #fff) 0%, #fff 85%) padding-box,
+      linear-gradient(120deg, var(--note-teal), #ffffff) border-box;
+  }
+
+  /* Buttons */
+  .links{display:flex;flex-wrap:wrap;gap:10px}
+  .btn{
+    display:inline-block;padding:10px 16px;border-radius:999px;text-decoration:none;
+    border:1.6px solid var(--taupe);color:var(--taupe);background:#fff;
+    transition:background .15s,color .15s,border-color .15s
+  }
+  .btn:hover,.btn:focus{background:var(--taupe);color:#fff;outline:none}
+
+  .home{margin-top:16px;text-align:center}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <!-- Logo -->
+  <div class="brandlock">
+    <img src="/quantaudio-logo.svg" alt="Quantaudio Studio logo"
+         onerror="this.onerror=null;this.src='/quantaudio-logo-wide.svg';">
+  </div>
+
+  <h1>All Links</h1>
+  <p class="lead">Scripture-Inspired. Cinematic. Find the music, licensing, socials, and study tools in one place.</p>
+
+  <div class="rule" aria-hidden="true"></div>
+
+  <section class="grid" aria-label="Link groups">
+    <!-- Listen / Watch -->
+    <article class="card tinted-gold col">
+      <h2>Listen / Watch</h2>
+      <div class="links" role="group" aria-label="Listen links">
+        <a class="btn" href="https://youtube.com/@QuantaudioStudio" target="_blank" rel="noopener">YouTube</a>
+        <a class="btn" href="https://www.tiktok.com/@quantaudiostudio" target="_blank" rel="noopener">TikTok</a>
+        <a class="btn" href="https://www.instagram.com/quantaudiostudio" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn" href="https://www.patreon.com/QuantaudioStudio" target="_blank" rel="noopener">Patreon</a>
+      </div>
+      <p style="margin-top:10px">Featured series: <em>Trade What Fades</em> — Sessions IX–XV.</p>
+    </article>
+
+    <!-- Licensing -->
+    <article class="card tinted-blue col">
+      <h2>Licensing</h2>
+      <p>Use Quantaudio Studio music in videos, services, phone on-hold, or sync.</p>
+      <div class="links" role="group" aria-label="Licensing links">
+        <a class="btn" href="/license">License Page</a>
+        <a class="btn" href="mailto:hello@quantaudio.studio?subject=Licensing%20Request%20-%20Quantaudio%20Studio">Email for Quote</a>
+      </div>
+    </article>
+
+    <!-- QA / Study -->
+    <article class="card tinted-lav col">
+      <h2>QA / Study</h2>
+      <p>“QA” denotes scriptural—Bible-anchored prompts behind each session.</p>
+      <div class="links" role="group" aria-label="QA links">
+        <a class="btn" href="/qa">QA Page</a>
+        <a class="btn" href="https://quantaudio.studio/qa#archive">This Week’s Verses</a>
+      </div>
+    </article>
+
+    <!-- Contact / Site -->
+    <article class="card tinted-teal col">
+      <h2>Contact & Site</h2>
+      <div class="links" role="group" aria-label="Contact links">
+        <a class="btn" href="mailto:hello@quantaudio.studio">hello@quantaudio.studio</a>
+        <a class="btn" href="/">Home</a>
+        <a class="btn" href="https://quantaudio.studio/">quantaudio.studio</a>
+      </div>
+      <p style="margin-top:10px">© Quantaudio Studio</p>
+    </article>
+
+    <!-- Optional full-width: Press / Brand (placeholder) -->
+    <article class="card tinted-gold col-12" aria-label="Press kit">
+      <h2>Press / Brand Kit</h2>
+      <p>Need the wordmark, logo, or brand notes? (Coming soon)</p>
+      <div class="links">
+        <a class="btn" href="mailto:hello@quantaudio.studio?subject=Press%20Kit%20Request">Request Press Kit</a>
+      </div>
+    </article>
+  </section>
+
+  <div class="home">
+    <a class="btn" href="/">Home</a>
+  </div>
+</main>
+</body>
+</html>
