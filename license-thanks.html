@@ -6,13 +6,17 @@
 <meta name="theme-color" content="#6F615D">
 <style>
   :root{ --taupe:#6F615D }
+  html,body{height:100%}
   body{
-    margin:0;display:flex;align-items:center;justify-content:center;height:100vh;
-    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Inter,Arial,sans-serif;color:var(--taupe)
+    margin:0;display:flex;align-items:center;justify-content:center;min-height:100%;
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Inter,Arial,sans-serif;color:var(--taupe);background:#fff;
   }
-  main{max-width:680px;padding:24px;text-align:center}
+  main{max-width:760px;padding:24px 20px;text-align:center}
+  h1{margin:0 0 8px;font-size:clamp(28px,3.4vw,36px)}
+  p{margin:0 auto;max-width:60ch;line-height:1.6;font-size:18px}
+  .actions{margin-top:16px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
   a.btn{
-    display:inline-block;margin:14px 6px 0;padding:10px 16px;border-radius:999px;text-decoration:none;
+    display:inline-block;padding:10px 16px;border-radius:999px;text-decoration:none;
     border:1.6px solid var(--taupe);color:var(--taupe)
   }
   a.btn:hover{background:var(--taupe);color:#fff}
@@ -21,9 +25,11 @@
 <body>
 <main>
   <h1>Thank you!</h1>
-  <p>We received your licensing request and will reply to your email shortly.</p>
-  <a class="btn" href="/license">Back to License</a>
-  <a class="btn" href="/">Home</a>
+  <p>Thanks — we received your request. We’ll reply to your email.</p>
+  <div class="actions">
+    <a class="btn" href="/license">Back to License</a>
+    <a class="btn" href="/">Home</a>
+  </div>
 </main>
 </body>
 </html>
