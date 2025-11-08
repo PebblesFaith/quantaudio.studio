@@ -3,33 +3,168 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>License | Quantaudio Studio™</title>
-<meta name="description" content="License Quantaudio Studio’s scripture-inspired cinematic music for YouTube, podcasts, churches, on-hold, and more.">
+<meta name="description" content="License Quantaudio Studio’s scripture-inspired, cinematic music for YouTube, podcasts, churches, on-hold, and sync.">
 <link rel="canonical" href="https://quantaudio.studio/license">
 <meta name="theme-color" content="#6F615D">
+
 <style>
-:root{--taupe:#6F615D;--bg:#fff}
-*{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Inter,Arial,sans-serif;color:var(--taupe);background:var(--bg)}
-.wrap{max-width:960px;margin:0 auto;padding:32px 16px}
-h1{font-size:32px;margin:8px 0 6px} p.lead{opacity:.9;margin:0 0 22px}
-.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin:18px 0 10px}
-.card{border:1.5px solid var(--taupe);border-radius:16px;padding:18px}
-.card h2{font-size:20px;margin:0 0 8px}
-.card ul{margin:8px 0 0 18px}
-.badge{font-weight:600;border:1px solid var(--taupe);padding:3px 8px;border-radius:999px;display:inline-block;margin-left:8px}
-.cta{margin:22px 0 8px}
-.btn{display:inline-block;margin:6px 8px;padding:11px 16px;border:1.6px solid var(--taupe);border-radius:999px;color:var(--taupe);text-decoration:none}
-.btn:hover{background:var(--taupe);color:#fff}
-small{opacity:.75}
+  /* ===== Brand Palette (sampled from your logo) ===== */
+  :root{
+    --taupe:#6F615D;         /* brand text */
+    --ink:#3e3634;           /* deep text for contrast */
+    --note-blue:#8FA8B8;     /* soft teal/blue notes */
+    --note-lav:#B9A9C9;      /* lavender notes */
+    --note-gold:#D8B56A;     /* golden notes */
+    --note-teal:#7FAE9B;     /* mossy teal notes */
+    --note-coral:#D59C8E;    /* warm coral notes */
+
+    --bg:#ffffff;
+    --ring: color-mix(in oklab, var(--taupe) 65%, #fff);
+    --shadow: 0 6px 20px rgba(0,0,0,.06);
+    --radius: 18px;
+  }
+
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--taupe);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+    display:flex; align-items:flex-start; justify-content:center;
+  }
+
+  main.wrap{
+    width:100%;
+    max-width:1100px;
+    margin: 40px auto;
+    padding: 0 16px 56px;
+  }
+
+  /* ===== Header ===== */
+  .brandlock{
+    display:flex; align-items:center; justify-content:center; gap:16px;
+    margin: 6px auto 6px;
+  }
+  .brandlock img{
+    width:min(140px, 45vw); height:auto; display:block;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,.08));
+  }
+  h1{
+    margin: 10px 0 4px;
+    text-align:center;
+    font-size: clamp(28px, 3.4vw, 38px);
+    color: var(--ink);
+    letter-spacing:.2px;
+  }
+  p.lead{
+    margin: 0 auto 24px;
+    text-align:center;
+    max-width: 52ch;
+    opacity:.9;
+  }
+
+  /* ===== Cards Grid ===== */
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap:16px;
+    margin: 22px auto 10px;
+    max-width: 1100px;
+  }
+  /* 3-up on desktop, 1–2 on small screens */
+  .col{ grid-column: span 4; }
+  @media (max-width: 980px){
+    .col{ grid-column: span 6; }
+  }
+  @media (max-width: 640px){
+    .col{ grid-column: 1 / -1; }
+  }
+
+  .card{
+    background: linear-gradient(180deg, #fff, #fff) padding-box,
+                conic-gradient(from 230deg at 10% 0%,
+                     var(--note-gold), var(--note-blue), var(--note-lav), var(--note-teal), var(--note-coral), var(--note-gold)) border-box;
+    border: 1.6px solid transparent;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 18px 18px 16px;
+    position:relative;
+  }
+  .card h2{
+    margin: 2px 0 8px;
+    font-size: 20px; color: var(--ink);
+  }
+  .card ul{ margin: 10px 0 0 18px }
+  .tag{
+    display:inline-block; margin-left:8px;
+    font-size:12px; font-weight:700; letter-spacing:.2px;
+    color: var(--ink);
+    background: color-mix(in oklab, var(--note-gold) 22%, #fff);
+    border: 1px solid var(--ring);
+    padding: 3px 8px; border-radius:999px;
+  }
+
+  /* ===== Accent card variants ===== */
+  .accent-blue  { background: linear-gradient(180deg, #fff, #fff) padding-box,
+                              linear-gradient(120deg, var(--note-blue), #ffffff) border-box;
+  }
+  .accent-gold  { background: linear-gradient(180deg, #fff, #fff) padding-box,
+                              linear-gradient(120deg, var(--note-gold), #ffffff) border-box;
+  }
+  .accent-lav   { background: linear-gradient(180deg, #fff, #fff) padding-box,
+                              linear-gradient(120deg, var(--note-lav), #ffffff) border-box;
+  }
+
+  /* ===== CTAs ===== */
+  .toolbar{
+    display:flex; gap:12px; flex-wrap:wrap; justify-content:center;
+    margin: 26px 0 8px;
+  }
+  .btn{
+    display:inline-block; padding:12px 18px;
+    border-radius:999px; text-decoration:none;
+    border:1.8px solid var(--taupe); color:var(--taupe);
+    transition: background .15s ease-in-out, color .15s ease-in-out, border-color .15s ease-in-out;
+    background: #fff;
+  }
+  .btn:hover,.btn:focus{ background: var(--taupe); color:#fff; outline:none }
+  .btn.alt{
+    border-color: var(--note-blue); color: var(--ink);
+  }
+  .btn.alt:hover{ background: var(--note-blue); color:#fff }
+
+  small.note{display:block; opacity:.72; text-align:center; margin:6px 0 0}
+  .home{ margin-top: 14px; text-align:center }
+
+  /* subtle rule using taupe dots */
+  .rule{
+    width:min(680px,90%); margin: 18px auto 14px;
+    height: 10px; background:
+      radial-gradient(var(--taupe) 1px, transparent 2px) repeat-x;
+    background-size: 12px 10px;
+    background-position: center;
+    opacity:.35;
+  }
 </style>
 </head>
 <body>
 <main class="wrap">
+
+  <!-- Mini lockup: small logo above headline -->
+  <div class="brandlock" aria-hidden="true">
+    <img src="/quantaudio-logo.svg" alt="">
+  </div>
+
   <h1>License Quantaudio Studio™</h1>
   <p class="lead">Scripture-Inspired. Cinematic. Choose a license that fits your use—then contact us to finalize.</p>
 
+  <div class="rule" aria-hidden="true"></div>
+
+  <!-- Grid -->
   <section class="grid" aria-label="License tiers">
-    <article class="card">
-      <h2>Creator (YouTube/Podcast) <span class="badge">Most Popular</span></h2>
+    <article class="card accent-gold col">
+      <h2>Creator (YouTube/Podcast) <span class="tag">Most Popular</span></h2>
       <ul>
         <li>Use in YouTube video, podcast, livestream</li>
         <li>Monetization allowed on your channel/feed</li>
@@ -37,7 +172,7 @@ small{opacity:.75}
       </ul>
     </article>
 
-    <article class="card">
+    <article class="card accent-blue col">
       <h2>Church/Ministry</h2>
       <ul>
         <li>Services, livestreams, devotionals, studies</li>
@@ -46,7 +181,7 @@ small{opacity:.75}
       </ul>
     </article>
 
-    <article class="card">
+    <article class="card accent-lav col">
       <h2>Business (On-Hold / In-Store)</h2>
       <ul>
         <li>Phone on-hold, lobbies, retail ambience</li>
@@ -55,23 +190,27 @@ small{opacity:.75}
       </ul>
     </article>
 
-    <article class="card">
+    <article class="card col" style="grid-column: span 12">
       <h2>Sync (Film/TV/Web)</h2>
       <ul>
         <li>Ads, films, trailers, apps, courses</li>
-        <li>Worldwide, term/territory negotiable</li>
+        <li>Worldwide; term/territory negotiable</li>
         <li>Custom cue requests welcome</li>
       </ul>
     </article>
   </section>
 
-  <section class="cta" aria-label="Get a quote">
+  <!-- CTAs -->
+  <div class="toolbar" aria-label="Get a quote">
     <a class="btn" href="mailto:hello@quantaudio.studio?subject=Licensing%20Request%20-%20Quantaudio%20Studio&body=Tell%20us%20how%20you%E2%80%99ll%20use%20the%20music%3A%0A%E2%80%A2%20Project%20type%3A%0A%E2%80%A2%20Usage%20(YouTube%2Fpodcast%2Fchurch%2Fbusiness%2Fsync)%3A%0A%E2%80%A2%20Territory%20%2F%20Term%3A%0A%E2%80%A2%20Budget%3A%0A%E2%80%A2%20Deadline%3A%0A">Email for Quote</a>
-    <a class="btn" href="https://youtube.com/@QuantaudioStudio" target="_blank" rel="noopener">Preview on YouTube</a>
-  </section>
+    <a class="btn alt" href="https://youtube.com/@QuantaudioStudio" target="_blank" rel="noopener">Preview on YouTube</a>
+  </div>
 
-  <p><small>Not a legal agreement. Final terms provided on invoice/license. ™ denotes an unregistered mark.</small></p>
-  <p><a class="btn" href="/">Home</a></p>
+  <small class="note">Not a legal agreement. Final terms provided on invoice/license. ™ denotes an unregistered mark.</small>
+
+  <div class="home">
+    <a class="btn" href="/">Home</a>
+  </div>
 </main>
 </body>
 </html>
