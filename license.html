@@ -8,15 +8,16 @@
 <meta name="theme-color" content="#6F615D">
 
 <style>
-  /* ===== Brand Palette (sampled from your logo) ===== */
+  /* ========= Brand Palette (all text = taupe) ========= */
   :root{
-    --taupe:#6F615D;         /* brand text */
-    --ink:#3e3634;           /* deep text for contrast */
-    --note-blue:#8FA8B8;     /* soft teal/blue notes */
-    --note-lav:#B9A9C9;      /* lavender notes */
-    --note-gold:#D8B56A;     /* golden notes */
-    --note-teal:#7FAE9B;     /* mossy teal notes */
-    --note-coral:#D59C8E;    /* warm coral notes */
+    --taupe:#6F615D;        /* primary brand/text */
+    --ink:#6F615D;          /* make headings same as taupe */
+    /* soft accent hues sampled from the logo for borders/accents */
+    --note-blue:#8FA8B8;
+    --note-lav:#B9A9C9;
+    --note-gold:#D8B56A;
+    --note-teal:#7FAE9B;
+    --note-coral:#D59C8E;
 
     --bg:#ffffff;
     --ring: color-mix(in oklab, var(--taupe) 65%, #fff);
@@ -28,130 +29,105 @@
   html,body{height:100%}
   body{
     margin:0;
-    background: var(--bg);
-    color: var(--taupe);
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial, sans-serif;
-    display:flex; align-items:flex-start; justify-content:center;
+    background:var(--bg);
+    color:var(--taupe); /* <-- everything inherits taupe */
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Inter,Arial,sans-serif;
+    display:flex;align-items:flex-start;justify-content:center;
   }
 
   main.wrap{
     width:100%;
     max-width:1100px;
-    margin: 40px auto;
-    padding: 0 16px 56px;
+    margin:40px auto;
+    padding:0 16px 56px;
   }
 
-  /* ===== Header ===== */
+  /* ===== Header / Lockup ===== */
   .brandlock{
-    display:flex; align-items:center; justify-content:center; gap:16px;
-    margin: 6px auto 6px;
+    display:flex;align-items:center;justify-content:center;gap:16px;
+    margin:6px auto 6px;
   }
   .brandlock img{
-    width:min(140px, 45vw); height:auto; display:block;
-    filter: drop-shadow(0 2px 6px rgba(0,0,0,.08));
+    width:min(140px,45vw);height:auto;display:block;
+    filter:drop-shadow(0 2px 6px rgba(0,0,0,.08));
   }
   h1{
-    margin: 10px 0 4px;
+    margin:10px 0 4px;
     text-align:center;
-    font-size: clamp(28px, 3.4vw, 38px);
-    color: var(--ink);
+    font-size:clamp(28px,3.4vw,38px);
+    color:inherit; /* taupe */
     letter-spacing:.2px;
   }
   p.lead{
-    margin: 0 auto 24px;
+    margin:0 auto 24px;
     text-align:center;
-    max-width: 52ch;
+    max-width:52ch;
     opacity:.9;
+    color:inherit; /* taupe */
   }
 
-  /* ===== Cards Grid ===== */
+  /* ===== Decorative dotted rule ===== */
+  .rule{
+    width:min(680px,90%);margin:18px auto 14px;height:10px;
+    background:radial-gradient(var(--taupe) 1px, transparent 2px) repeat-x;
+    background-size:12px 10px;background-position:center;opacity:.35;
+  }
+
+  /* ===== Responsive Grid ===== */
   .grid{
-    display:grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap:16px;
-    margin: 22px auto 10px;
-    max-width: 1100px;
+    display:grid;grid-template-columns:repeat(12,1fr);
+    gap:16px;margin:22px auto 10px;max-width:1100px;
   }
-  /* 3-up on desktop, 1–2 on small screens */
-  .col{ grid-column: span 4; }
-  @media (max-width: 980px){
-    .col{ grid-column: span 6; }
-  }
-  @media (max-width: 640px){
-    .col{ grid-column: 1 / -1; }
-  }
+  .col{grid-column:span 4}
+  @media (max-width:980px){ .col{grid-column:span 6} }
+  @media (max-width:640px){ .col{grid-column:1 / -1} }
 
+  /* ===== Cards ===== */
   .card{
-    background: linear-gradient(180deg, #fff, #fff) padding-box,
-                conic-gradient(from 230deg at 10% 0%,
-                     var(--note-gold), var(--note-blue), var(--note-lav), var(--note-teal), var(--note-coral), var(--note-gold)) border-box;
-    border: 1.6px solid transparent;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    padding: 18px 18px 16px;
-    position:relative;
+    background:linear-gradient(180deg,#fff,#fff) padding-box,
+               conic-gradient(from 230deg at 10% 0%,
+                 var(--note-gold),var(--note-blue),var(--note-lav),
+                 var(--note-teal),var(--note-coral),var(--note-gold)) border-box;
+    border:1.6px solid transparent;border-radius:var(--radius);
+    box-shadow:var(--shadow);padding:18px 18px 16px;position:relative;
+    color:inherit; /* taupe text inside */
   }
-  .card h2{
-    margin: 2px 0 8px;
-    font-size: 20px; color: var(--ink);
-  }
-  .card ul{ margin: 10px 0 0 18px }
+  .card h2{margin:2px 0 8px;font-size:20px;color:inherit}
+  .card ul{margin:10px 0 0 18px}
   .tag{
-    display:inline-block; margin-left:8px;
-    font-size:12px; font-weight:700; letter-spacing:.2px;
-    color: var(--ink);
-    background: color-mix(in oklab, var(--note-gold) 22%, #fff);
-    border: 1px solid var(--ring);
-    padding: 3px 8px; border-radius:999px;
+    display:inline-block;margin-left:8px;font-size:12px;font-weight:700;letter-spacing:.2px;
+    color:inherit;background:color-mix(in oklab,var(--note-gold) 22%,#fff);
+    border:1px solid var(--ring);padding:3px 8px;border-radius:999px;
   }
-
-  /* ===== Accent card variants ===== */
-  .accent-blue  { background: linear-gradient(180deg, #fff, #fff) padding-box,
-                              linear-gradient(120deg, var(--note-blue), #ffffff) border-box;
-  }
-  .accent-gold  { background: linear-gradient(180deg, #fff, #fff) padding-box,
-                              linear-gradient(120deg, var(--note-gold), #ffffff) border-box;
-  }
-  .accent-lav   { background: linear-gradient(180deg, #fff, #fff) padding-box,
-                              linear-gradient(120deg, var(--note-lav), #ffffff) border-box;
-  }
+  .accent-blue{ background:linear-gradient(180deg,#fff,#fff) padding-box,
+                           linear-gradient(120deg,var(--note-blue),#ffffff) border-box; }
+  .accent-gold{ background:linear-gradient(180deg,#fff,#fff) padding-box,
+                           linear-gradient(120deg,var(--note-gold),#ffffff) border-box; }
+  .accent-lav{  background:linear-gradient(180deg,#fff,#fff) padding-box,
+                           linear-gradient(120deg,var(--note-lav),#ffffff) border-box; }
 
   /* ===== CTAs ===== */
   .toolbar{
-    display:flex; gap:12px; flex-wrap:wrap; justify-content:center;
-    margin: 26px 0 8px;
+    display:flex;gap:12px;flex-wrap:wrap;justify-content:center;
+    margin:26px 0 8px;
   }
   .btn{
-    display:inline-block; padding:12px 18px;
-    border-radius:999px; text-decoration:none;
-    border:1.8px solid var(--taupe); color:var(--taupe);
-    transition: background .15s ease-in-out, color .15s ease-in-out, border-color .15s ease-in-out;
-    background: #fff;
+    display:inline-block;padding:12px 18px;border-radius:999px;text-decoration:none;
+    border:1.8px solid var(--taupe);color:var(--taupe);background:#fff;
+    transition:background .15s ease-in-out,color .15s ease-in-out,border-color .15s ease-in-out;
   }
-  .btn:hover,.btn:focus{ background: var(--taupe); color:#fff; outline:none }
-  .btn.alt{
-    border-color: var(--note-blue); color: var(--ink);
-  }
-  .btn.alt:hover{ background: var(--note-blue); color:#fff }
+  .btn:hover,.btn:focus{background:var(--taupe);color:#fff;outline:none}
+  .btn.alt{border-color:var(--note-blue);color:var(--taupe)}
+  .btn.alt:hover{background:var(--note-blue);color:#fff}
 
-  small.note{display:block; opacity:.72; text-align:center; margin:6px 0 0}
-  .home{ margin-top: 14px; text-align:center }
-
-  /* subtle rule using taupe dots */
-  .rule{
-    width:min(680px,90%); margin: 18px auto 14px;
-    height: 10px; background:
-      radial-gradient(var(--taupe) 1px, transparent 2px) repeat-x;
-    background-size: 12px 10px;
-    background-position: center;
-    opacity:.35;
-  }
+  small.note{display:block;opacity:.72;text-align:center;margin:6px 0 0}
+  .home{margin-top:14px;text-align:center}
 </style>
 </head>
 <body>
 <main class="wrap">
 
-  <!-- Mini lockup: small logo above headline -->
+  <!-- Mini lockup: logo above headline -->
   <div class="brandlock" aria-hidden="true">
     <img src="/quantaudio-logo.svg" alt="">
   </div>
@@ -202,8 +178,13 @@
 
   <!-- CTAs -->
   <div class="toolbar" aria-label="Get a quote">
-    <a class="btn" href="mailto:hello@quantaudio.studio?subject=Licensing%20Request%20-%20Quantaudio%20Studio&body=Tell%20us%20how%20you%E2%80%99ll%20use%20the%20music%3A%0A%E2%80%A2%20Project%20type%3A%0A%E2%80%A2%20Usage%20(YouTube%2Fpodcast%2Fchurch%2Fbusiness%2Fsync)%3A%0A%E2%80%A2%20Territory%20%2F%20Term%3A%0A%E2%80%A2%20Budget%3A%0A%E2%80%A2%20Deadline%3A%0A">Email for Quote</a>
-    <a class="btn alt" href="https://youtube.com/@QuantaudioStudio" target="_blank" rel="noopener">Preview on YouTube</a>
+    <a class="btn"
+       href="mailto:hello@quantaudio.studio?subject=Licensing%20Request%20-%20Quantaudio%20Studio&body=Tell%20us%20how%20you%E2%80%99ll%20use%20the%20music%3A%0A%E2%80%A2%20Project%20type%3A%0A%E2%80%A2%20Usage%20(YouTube%2Fpodcast%2Fchurch%2Fbusiness%2Fsync)%3A%0A%E2%80%A2%20Territory%20%2F%20Term%3A%0A%E2%80%A2%20Budget%3A%0A%E2%80%A2%20Deadline%3A%0A">
+      Email for Quote
+    </a>
+    <a class="btn alt" href="https://youtube.com/@QuantaudioStudio" target="_blank" rel="noopener">
+      Preview on YouTube
+    </a>
   </div>
 
   <small class="note">Not a legal agreement. Final terms provided on invoice/license. ™ denotes an unregistered mark.</small>
