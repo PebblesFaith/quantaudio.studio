@@ -1,92 +1,75 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Quantaudio Studio — Scripture-Inspired. Cinematic.</title>
-  <meta name="description" content="Quantaudio Studio creates scripture-inspired cinematic music. Listen, license, and explore QA prompts rooted in the Bible.">
+  <title>Quantaudio Studio™ — Scripture-Inspired. Cinematic.</title>
+  <meta name="description" content="Quantaudio Studio™ creates scripture-inspired cinematic music. Listen, license, and explore Bible-based QA prompts." />
+  <link rel="canonical" href="https://quantaudio.studio/" />
+  <meta name="theme-color" content="#6F615D" />
 
-  <!-- Canonical & theme -->
-  <link rel="canonical" href="https://quantaudio.studio/">
-  <meta name="theme-color" content="#6F615D">
-
-  <!-- Favicon / app icons (add these files when ready) -->
-  <link rel="icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <!-- Favicons / PWA (add these files when ready) -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
 
   <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="Quantaudio Studio — Scripture-Inspired. Cinematic.">
-  <meta property="og:title" content="Quantaudio Studio — Scripture-Inspired. Cinematic.">
-  <meta property="og:description" content="Cinematic worship and devotional instrumentals. Listen, license, and explore QA prompts.">
-  <meta property="og:url" content="https://quantaudio.studio/">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://quantaudio.studio/og-image.jpg">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:title" content="Quantaudio Studio™ — Scripture-Inspired. Cinematic." />
+  <meta property="og:description" content="Cinematic worship and devotional instrumentals. Listen, license, and explore QA prompts." />
+  <meta property="og:url" content="https://quantaudio.studio/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://quantaudio.studio/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <style>
-    :root{
-      --taupe:#6F615D;      /* brand color */
-      --bg:#ffffff;
+    :root { --taupe:#6F615D; --bg:#fff; }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      color: var(--taupe);
+      background: var(--bg);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+      display: flex; align-items: center; justify-content: center;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
-      color:var(--taupe); background:var(--bg);
-      display:flex; align-items:center; justify-content:center;
-    }
-    .wrap{
-      width:100%; max-width:1060px; padding:48px 16px; text-align:center;
-    }
-    /* Brand logo */
-    .brand{margin:0 auto 18px; display:flex; justify-content:center; align-items:center}
-    .brand img{
-      width:min(96vw, 980px); height:auto; display:block;
+    main.wrap {
+      width: 100%; max-width: 1060px; padding: 48px 16px; text-align: center;
     }
 
-    h1{
-      font-size:40px; letter-spacing:.6px; margin:10px 0 6px;
-      text-transform:uppercase;
+    /* Brand + ™ */
+    .visually-hidden {
+      position: absolute !important; height: 1px; width: 1px; overflow: hidden;
+      clip: rect(1px,1px,1px,1px); white-space: nowrap; border: 0; padding: 0; margin: -1px;
     }
-    .lead{font-size:18px; opacity:.9; margin:0 0 28px}
+    .brand { position: relative; margin: 0 auto 18px; display: flex; justify-content: center; }
+    .brand img { width: min(96vw, 980px); height: auto; display: block; }
+    .brand::after {
+      content: "™";
+      position: absolute; right: 6px; top: 6px;
+      font: 700 14px/1 system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+      color: var(--taupe); opacity: .92; pointer-events: none;
+    }
+
+    .lead { font-size: 18px; opacity: .9; margin: 4px 0 28px; }
 
     /* Buttons */
-    .btns{display:flex; gap:14px; justify-content:center; flex-wrap:wrap}
-    .btn{
-      display:inline-block; padding:12px 18px; border-radius:999px;
-      border:1.6px solid var(--taupe); color:var(--taupe); text-decoration:none;
-      transition:.15s ease-in-out;
+    nav.btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    a.btn {
+      display: inline-block; padding: 12px 18px; border-radius: 999px;
+      border: 1.6px solid var(--taupe); color: var(--taupe); text-decoration: none;
+      transition: background .15s ease-in-out, color .15s ease-in-out, border-color .15s ease-in-out;
     }
-    .btn:hover,.btn:focus{background:var(--taupe); color:#fff; outline:none}
+    a.btn:hover, a.btn:focus { background: var(--taupe); color: #fff; outline: none; }
 
-    footer{margin-top:40px; font-size:14px; opacity:.72}
+    footer { margin-top: 40px; font-size: 14px; opacity: .72; }
 
-    @media (max-width:640px){
-      h1{font-size:30px}
-      .lead{font-size:16px}
+    @media (max-width: 640px) {
+      .lead { font-size: 16px; }
     }
-
-
-  :root{ --taupe:#6F615D; }
-  .visually-hidden{
-    position:absolute!important; height:1px; width:1px; overflow:hidden;
-    clip:rect(1px,1px,1px,1px); white-space:nowrap; border:0; padding:0; margin:-1px;
-  }
-  .brand{ position:relative; margin:0 auto 18px; display:flex; justify-content:center }
-  .brand img{ width:min(96vw, 980px); height:auto; display:block }
-  /* ™ overlay in brand taupe, tucked at top-right of the logo area */
-  .brand-tm::after{
-    content:"™"; position:absolute; right:6px; top:6px; 
-    font: 700 14px/1 system-ui, -apple-system, Segoe UI, Roboto, Inter, sans-serif;
-    color:var(--taupe); opacity:.9; pointer-events:none;
-  }
-
-
   </style>
 
-  <!-- Structured data (Organization) -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -94,32 +77,29 @@
     "name": "Quantaudio Studio",
     "url": "https://quantaudio.studio/",
     "logo": "https://quantaudio.studio/quantaudio-logo.svg",
+    "email": "hello@quantaudio.studio",
     "sameAs": [
       "https://youtube.com/@QuantaudioStudio",
       "https://www.instagram.com/quantaudiostudio",
       "https://www.tiktok.com/@quantaudiostudio",
       "https://www.patreon.com/QuantaudioStudio"
-    ],
-    "email": "hello@quantaudio.studio"
+    ]
   }
   </script>
 </head>
 <body>
   <main class="wrap">
-   
-    <!-- LOGO with ™ badge -->
-    <figure class="brand brand-tm" aria-label="Quantaudio Studio logo">
-      <img src="/quantaudio-logo.svg" alt="Quantaudio Studio logo with musical motif">
+    <!-- LOGO (wordmark is inside the art; headline hidden for SEO) -->
+    <figure class="brand" aria-label="Quantaudio Studio logo">
+      <img src="/quantaudio-logo.svg" alt="Quantaudio Studio logo with musical motif"
+           onerror="this.onerror=null;this.src='/quantaudio-logo.png';" />
     </figure>
-    
-    <!-- Visually hidden H1 for SEO/accessibility -->
+
+    <!-- Hidden H1 keeps SEO without duplicating the visible wordmark -->
     <h1 class="visually-hidden">Quantaudio Studio™</h1>
     <p class="lead">Scripture-Inspired. Cinematic.</p>
 
-    <h1>Quantaudio Studio</h1>
-    <p class="lead">Scripture-Inspired. Cinematic.</p>
-
-    <nav class="btns" aria-label="Primary">
+    <nav class="btns" aria-label="Primary navigation">
       <a class="btn" href="https://youtube.com/@QuantaudioStudio" target="_blank" rel="noopener">Listen</a>
       <a class="btn" href="/license">License</a>
       <a class="btn" href="/qa">QA</a>
@@ -129,6 +109,6 @@
     <footer>© Quantaudio Studio</footer>
   </main>
 
-  <noscript>JavaScript is disabled; links remain fully functional.</noscript>
+  <noscript>JavaScript is disabled; navigation links still work.</noscript>
 </body>
 </html>
