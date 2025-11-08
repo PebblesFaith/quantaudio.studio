@@ -85,14 +85,28 @@
       "https://www.patreon.com/QuantaudioStudio"
     ]
   }
+
+  /* Let the logo go wider than the centered content */
+  .brand { margin: 0 auto 18px; }
+  .brand img {
+    display:block;
+    width: 100vw;        /* take the whole viewport width */
+    max-width: 2000px;   /* keeps ultrawide monitors reasonable */
+    height: auto;
+    margin-left: 50%;
+    transform: translateX(-50%); /* center the 100vw image within the page */
+}
+
   </script>
 </head>
 <body>
   <main class="wrap">
     <!-- LOGO (wordmark is inside the art; headline hidden for SEO) -->
     <figure class="brand" aria-label="Quantaudio Studio logo">
-      <img src="/quantaudio-logo.svg" alt="Quantaudio Studio logo with musical motif"
-           onerror="this.onerror=null;this.src='/quantaudio-logo.png';" />
+     <!-- replace the src to use the cropped, wide version -->
+     <img src="/quantaudio-logo-wide.svg" alt="Quantaudio Studio logo with musical motif"
+     onerror="this.onerror=null;this.src='/quantaudio-logo-wide.png';">
+
     </figure>
 
     <!-- Hidden H1 keeps SEO without duplicating the visible wordmark -->
