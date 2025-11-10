@@ -2,176 +2,55 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>About | Quantaudio Studio™ — Scripture-Inspired. Cinematic.</title>
-<meta name="description" content="Quantaudio Studio creates scripture-inspired, cinematic music. Learn the story, ethos, and how the QA mark guides every session.">
+<title>About | Quantaudio Studio™</title>
+<meta name="description" content="About Quantaudio Studio — scripture-inspired, cinematic music sessions and the QA mark.">
 <link rel="canonical" href="https://quantaudio.studio/about">
 <meta name="theme-color" content="#6F615D">
-
 <style>
-  :root{
-    --taupe:#6F615D;
-    --note-blue:#8FA8B8; --note-lav:#B9A9C9; --note-gold:#D8B56A; --note-teal:#7FAE9B;
-    --bg:#ffffff; --ring: color-mix(in oklab, var(--taupe) 65%, #fff);
-    --shadow: 0 6px 20px rgba(0,0,0,.06); --radius:18px;
-  }
-  *{box-sizing:border-box}
-  html,body{height:100%}
-  body{
-    margin:0; background:var(--bg); color:var(--taupe);
-    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Inter,Arial,sans-serif;
-    display:flex; align-items:flex-start; justify-content:center;
-  }
-  main.wrap{width:100%;max-width:1100px;margin:40px auto;padding:0 16px 56px}
-
-  /* Header lockup */
-  .brandlock{display:flex;align-items:center;justify-content:center;gap:16px;margin:6px auto 6px}
-  .brandlock img{width:min(140px,45vw);height:auto;display:block;filter:drop-shadow(0 2px 6px rgba(0,0,0,.08))}
-  h1{margin:10px 0 4px;text-align:center;font-size:clamp(28px,3.4vw,38px)}
-  p.lead{margin:0 auto 22px;text-align:center;max-width:70ch;opacity:.9}
-
-  /* Dotted rule */
-  .rule{width:min(720px,92%);margin:18px auto 18px;height:10px;
-    background:radial-gradient(var(--taupe) 1px, transparent 2px) repeat-x;
-    background-size:12px 10px;background-position:center;opacity:.35}
-
-  /* Grid + cards */
-  .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin:22px auto 10px;max-width:1100px}
-  .col-6{grid-column:span 6}
-  .col-12{grid-column:1 / -1}
-  @media (max-width:980px){.col-6{grid-column:span 6}}
-  @media (max-width:640px){.col-6,.col-12{grid-column:1 / -1}}
-
-  .card{
-    border:1.6px solid transparent;border-radius:var(--radius);
-    box-shadow:var(--shadow);padding:20px 20px 18px;position:relative;
-    background:linear-gradient(180deg,#fff,#fff) padding-box;color:inherit
-  }
-  .card h2{margin:2px 0 10px;font-size:22px}
-  .card p{margin:10px 0 0;line-height:1.6}
-  .card ul{margin:10px 0 0 18px}
-
-  .tinted-gold{
-    background:
-      linear-gradient(180deg, color-mix(in oklab, var(--note-gold) 16%, #fff) 0%, #fff 85%) padding-box,
-      linear-gradient(120deg, var(--note-gold), #ffffff) border-box;
-  }
-  .tinted-blue{
-    background:
-      linear-gradient(180deg, color-mix(in oklab, var(--note-blue) 16%, #fff) 0%, #fff 85%) padding-box,
-      linear-gradient(120deg, var(--note-blue), #ffffff) border-box;
-  }
-  .tinted-lav{
-    background:
-      linear-gradient(180deg, color-mix(in oklab, var(--note-lav) 16%, #fff) 0%, #fff 85%) padding-box,
-      linear-gradient(120deg, var(--note-lav), #ffffff) border-box;
-  }
-  .tinted-teal{
-    background:
-      linear-gradient(180deg, color-mix(in oklab, var(--note-teal) 16%, #fff) 0%, #fff 85%) padding-box,
-      linear-gradient(120deg, var(--note-teal), #ffffff) border-box;
-  }
-
-  /* Buttons */
-  .actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:20px 0 8px}
-  .btn{
-    display:inline-block;padding:10px 16px;border-radius:999px;text-decoration:none;
-    border:1.6px solid var(--taupe);color:var(--taupe);background:#fff;
-    transition:background .15s,color .15s,border-color .15s
-  }
-   .small{opacity:.75;font-size:.95rem}
-
-  :root { --taupe:#6F615D; }
-  a.btn {
-    border:1.6px solid var(--taupe);
-    color: var(--taupe);
-    padding:12px 18px;
-    border-radius:999px;
-    text-decoration:none;
-    transition:background .15s,color .15s,border-color .15s;
-  }
-  a.btn:hover,
-  a.btn:focus {
-    background: var(--taupe);
-    color: #fff !important; /* override inline color */
-    outline: none;
-  }
-  
+:root{--taupe:#6F615D;--note-blue:#8FA8B8;--note-lav:#B9A9C9;--note-gold:#D8B56A;--note-teal:#7FAE9B;--shadow:0 6px 20px rgba(0,0,0,.06);--radius:18px}
+*{box-sizing:border-box}
+body{margin:0;color:var(--taupe);background:#fff;font-family:system-ui,-apple-system,"Segoe UI",Inter,Roboto,Arial,sans-serif}
+main{max-width:980px;margin:40px auto;padding:0 16px}
+.brand{display:flex;justify-content:center}
+.brand img{width:min(140px,45vw);height:auto;filter:drop-shadow(0 2px 6px rgba(0,0,0,.08))}
+h1{text-align:center;margin:10px 0 4px;font-size:clamp(28px,3.4vw,38px)}
+.lead{text-align:center;max-width:60ch;margin:0 auto 18px;opacity:.9}
+.section{border:1.6px solid transparent;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;margin:18px 0;background:
+  linear-gradient(180deg,color-mix(in oklab,var(--note-lav)14%,#fff)0%,#fff 85%) padding-box,
+  linear-gradient(120deg,var(--note-lav),#ffffff) border-box}
+h2{margin:0 0 8px;font-size:22px}
+p{margin:8px 0;line-height:1.65}
+ul{margin:8px 0 0 18px}
+.btns a{display:inline-block;margin:10px 6px 0;padding:10px 16px;border-radius:999px;text-decoration:none;border:1.6px solid var(--taupe);color:var(--taupe)}
+.btns a:hover{background:var(--taupe);color:#fff}
 </style>
 </head>
 <body>
-<main class="wrap">
-
-  <!-- Logo -->
-  <div class="brandlock">
-    <img src="/quantaudio-logo.svg" alt="Quantaudio Studio logo"
-         onerror="this.onerror=null;this.src='/quantaudio-logo-wide.svg';">
+<main>
+  <div class="brand">
+    <img src="/quantaudio-logo.svg" alt="Quantaudio Studio logo" onerror="this.onerror=null;this.src='/quantaudio-logo-wide.svg'">
   </div>
+  <h1>About</h1>
+  <p class="lead">Scripture-Inspired. Cinematic. Quantaudio Studio composes Bible-anchored, cinematic instrumentals designed for prayer, study, and reflection.</p>
 
-  <h1>About Quantaudio Studio™</h1>
-  <p class="lead">Scripture-Inspired. Cinematic. We compose devotional instrumentals and vocal pieces that help listeners pray, study, and walk out the Word.</p>
-
-  <div class="rule" aria-hidden="true"></div>
-
-  <section class="grid" aria-label="About content">
-    <article class="card tinted-gold col-6">
-      <h2>Mission</h2>
-      <p>To craft music that carries Scripture into everyday life—quiet enough to pray through, bold enough to score a moment of faith.</p>
-      <ul>
-        <li><strong>Rooted in Scripture.</strong> Every session begins with the text.</li>
-        <li><strong>Built for practice.</strong> Study, journaling, worship, reflection.</li>
-        <li><strong>Ready for use.</strong> Clear licensing for creators, churches, and businesses.</li>
-      </ul>
-    </article>
-
-    <article class="card tinted-blue col-6">
-      <h2>The Sound</h2>
-      <p>Cinematic palettes, modern textures, and melodic lines designed to leave room for the listener. Think “devotional score”—not just background music.</p>
-      <ul>
-        <li>Series example: <em>Trade What Fades</em> (Sessions I – XV)</li>
-        <li>Instrumental & select vocal releases (lyrics displayed)</li>
-      </ul>
-    </article>
-
-    <article class="card tinted-lav col-6">
-      <h2>What “QA” Means</h2>
-      <p>“QA” denotes <em>scriptural</em>. It’s our mark for Bible-anchored prompts that guide each session (questions to ask, answers to walk out).</p>
-      <div class="actions">
-        <a class="btn" href="/qa">Explore QA</a>
-      </div>
-    </article>
-
-    <article class="card tinted-teal col-6">
-      <h2>Credits & Licensing</h2>
-      <p>Credit guidance: <em>“Music by Quantaudio Studio.”</em> Licensing is available for creators, churches/ministries, on-hold/retail, and sync (film/TV/web).</p>
-      <div class="actions">
-        <a class="btn" href="/license">License Music</a>
-        <a class="btn" href="mailto:hello@quantaudio.studio?subject=Licensing%20Request">Email for Quote</a>
-      </div>
-      <p class="small">© Quantaudio Studio. “™” denotes an unregistered mark.</p>
-    </article>
-
-    <article class="card tinted-gold col-12">
-      <h2>Connect</h2>
-      <div class="actions" role="group" aria-label="Links">
-        <a class="btn" href="https://youtube.com/@QuantaudioStudio" target="_blank" rel="noopener">YouTube</a>
-        <a class="btn" href="https://www.tiktok.com/@quantaudiostudio" target="_blank" rel="noopener">TikTok</a>
-        <a class="btn" href="https://www.instagram.com/quantaudiostudio" target="_blank" rel="noopener">Instagram</a>
-        <a class="btn" href="https://www.patreon.com/QuantaudioStudio" target="_blank" rel="noopener">Patreon</a>
-        <a class="btn" href="/links">All Links</a>
-      </div>
-    </article>
+  <section class="section">
+    <h2>What “QA” Means</h2>
+    <p><strong>QA</strong> denotes concise, scripture-rooted prompts that frame each session—questions to listen by, answers found in the Word.</p>
+    <ul>
+      <li>Anchored in a key verse and supporting passages</li>
+      <li>Minimal narration; the music carries the meditation</li>
+      <li>Clear credit line: <em>“Music by Quantaudio Studio”</em></li>
+    </ul>
   </section>
 
-  <br>
-  <nav class="btns" aria-label="Primary navigation" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:10px 0 0">
-    <a class="btn" href="/">Home</a>
-    <a class="btn" href="/license">License</a>
-    <a class="btn" href="/qa">QA</a>
-    <a class="btn" href="/links">Links</a>
-    <a class="btn" href="/press/">Press</a>
-    <a class="btn" href="/about">About</a>
-  </nav>
-  
+  <section class="section">
+    <h2>Current Series: <em>Trade What Fades</em></h2>
+    <p>Highlights: Sessions IX–XV (“Good Foundation”, “Pearl of Great Price”, “Instruction over Silver”, “More Precious Than Rubies (Selah)”, “Sweeter Than Honey”, “Earthen Vessels”, “Heaven’s Vault”).</p>
+  </section>
+
+  <div class="btns" style="text-align:center">
+    <a href="/">Home</a><a href="/license">License</a><a href="/qa">QA</a><a href="/links">Links</a><a href="/press/">Press</a>
+  </div>
 </main>
 </body>
 </html>
