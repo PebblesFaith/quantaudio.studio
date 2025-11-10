@@ -97,8 +97,25 @@
   }
   .btn:hover,.btn:focus{background:var(--taupe);color:#fff}
 
-  .home{margin-top:18px;text-align:center}
-  small.note{display:block;opacity:.72;text-align:center;margin:10px 0 0}
+ 
+    :root { --taupe:#6F615D; }
+    a.btn {
+      border:1.6px solid var(--taupe);
+      color: var(--taupe);
+      padding:12px 18px;
+      border-radius:999px;
+      text-decoration:none;
+      transition:background .15s,color .15s,border-color .15s;
+    }
+    a.btn:hover,
+    a.btn:focus {
+      background: var(--taupe);
+      color: #fff !important; /* override inline color */
+      outline: none;
+    }
+
+
+  
 </style>
 </head>
 <body>
@@ -226,9 +243,15 @@
     </article>
   </section>
 
-  <div class="home">
+  <nav class="btns" aria-label="Primary navigation" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:10px 0 0">
     <a class="btn" href="/">Home</a>
-  </div>
+    <a class="btn" href="/license">License</a>
+    <a class="btn" href="/qa">QA</a>
+    <a class="btn" href="/links">Links</a>
+    <a class="btn" href="/press/">Press</a>
+    <a class="btn" href="/about">About</a>
+  </nav>
+  
 </main>
 </body>
 </html>
