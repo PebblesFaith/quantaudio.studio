@@ -5,23 +5,33 @@
 <title>Page not found | Quantaudio Studio™</title>
 <meta name="theme-color" content="#6F615D">
 <style>
-:root{--taupe:#6F615D}
-html,body{height:100%}
-body{margin:0;display:flex;align-items:center;justify-content:center;min-height:100%;
-     font-family:system-ui,-apple-system,"Segoe UI",Roboto,Inter,Arial,sans-serif;color:var(--taupe);background:#fff}
-main{text-align:center;max-width:720px;padding:24px}
-h1{margin:0 0 10px;font-size:clamp(28px,3.4vw,40px)}
-p{margin:0 auto 12px;max-width:60ch;line-height:1.6;font-size:18px}
-a.btn{display:inline-block;margin-top:10px;padding:10px 16px;border-radius:999px;text-decoration:none;border:1.6px solid var(--taupe);color:var(--taupe)}
-a.btn:hover{background:var(--taupe);color:#fff}
+  :root{--taupe:#6F615D}
+  html,body{height:100%}
+  body{margin:0;display:flex;align-items:center;justify-content:center;min-height:100%;
+       font-family:system-ui,-apple-system,"Segoe UI",Roboto,Inter,Arial,sans-serif;color:var(--taupe);background:#fff}
+  main{text-align:center;max-width:760px;padding:24px}
+  .brand{display:flex;justify-content:center;margin-bottom:10px}
+  .brand img{width:min(140px,45vw);height:auto;filter:drop-shadow(0 2px 6px rgba(0,0,0,.08))}
+  h1{margin:6px 0 8px;font-size:clamp(28px,3.4vw,40px)}
+  p{margin:0 auto 14px;max-width:60ch;line-height:1.6;font-size:18px}
+  .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;padding:10px 16px;border-radius:999px;text-decoration:none;border:1.6px solid var(--taupe);color:var(--taupe)}
+  .btn:hover{background:var(--taupe);color:#fff}
 </style>
 </head>
 <body>
 <main>
+  <div class="brand">
+    <img src="/quantaudio-logo.svg" alt="Quantaudio Studio logo"
+         onerror="this.onerror=null;this.src='/quantaudio-logo-wide.svg'">
+  </div>
   <h1>404 — Not Found</h1>
-  <p>That page isn’t here. Try the homepage or licensing.</p>
-  <a class="btn" href="/">Home</a>
-  <a class="btn" href="/license">License</a>
+  <p>That page isn’t here. Try the homepage, licensing, or our QA prompts.</p>
+  <div class="btns">
+    <a class="btn" href="/">Home</a>
+    <a class="btn" href="/license">License</a>
+    <a class="btn" href="/qa">QA</a>
+  </div>
 </main>
 </body>
 </html>
