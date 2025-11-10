@@ -21,10 +21,13 @@
 </head>
 <body>
 <main>
-  <div class="brand">
-    <img src="/quantaudio-logo.svg" alt="Quantaudio Studio logo"
-         onerror="this.onerror=null;this.src='/quantaudio-logo-wide.svg'">
-  </div>
+
+   <figure class="brand" aria-label="Quantaudio Studio logo">
+      <!-- Use the wide asset if uploaded; otherwise swap to /quantaudio-logo.svg -->
+      <img src="/quantaudio-logo-wide.svg" alt="Quantaudio Studio logo with musical motif"
+           onerror="this.onerror=null;this.src='/quantaudio-logo-wide.png';">
+    </figure>
+
   <h1>404 — Not Found</h1>
   <p>That page isn’t here. Try the homepage, licensing, or our QA prompts.</p>
   <div class="btns">
