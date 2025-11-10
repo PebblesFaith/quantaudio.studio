@@ -41,7 +41,7 @@
 
   .card{
     border:1.6px solid transparent;border-radius:var(--radius);
-    box-shadow:var(--shadow);padding:20px 20px 18px;background:#fff;color:inherit;
+    box-shadow:var(--shadow);padding:20px;background:#fff;color:inherit;
   }
   .card h2{margin:2px 0 10px;font-size:20px}
   .card ul{margin:10px 0 0 18px}
@@ -84,38 +84,24 @@
          background-position:right 16px top 20px,right 10px top 20px;background-size:6px 6px,6px 6px;background-repeat:no-repeat}
   textarea{min-height:140px; height:auto; resize:vertical}
   input::placeholder, textarea::placeholder{color:#8a8280}
-
   input:focus, select:focus, textarea:focus{
     border-color: var(--note-blue);
     box-shadow: 0 0 0 3px color-mix(in oklab, var(--note-blue) 35%, #fff);
   }
 
+  /* Buttons (single source of truth) */
   .btnbar{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-start;margin-top:6px}
-  .btn{
-    display:inline-block;padding:12px 20px;border-radius:999px;text-decoration:none;
-    border:2px solid var(--taupe);color:var(--taupe);background:#fff;cursor:pointer;font-size:16px
+  a.btn, a.btn:link, a.btn:visited, .btn{
+    display:inline-block;padding:12px 18px;border-radius:999px;text-decoration:none;
+    border:1.6px solid var(--taupe);color:var(--taupe);background:#fff;cursor:pointer;font-size:16px;
+    transition: background .15s, color .15s, border-color .15s;
   }
-  .btn:hover,.btn:focus{background:var(--taupe);color:#fff}
+  a.btn:hover, a.btn:focus, .btn:hover, .btn:focus{
+    background: var(--taupe); border-color: var(--taupe); color:#fff !important; outline:none;
+  }
 
- 
-    :root { --taupe:#6F615D; }
-    a.btn {
-      border:1.6px solid var(--taupe);
-      color: var(--taupe);
-      padding:12px 18px;
-      border-radius:999px;
-      text-decoration:none;
-      transition:background .15s,color .15s,border-color .15s;
-    }
-    a.btn:hover,
-    a.btn:focus {
-      background: var(--taupe);
-      color: #fff !important; /* override inline color */
-      outline: none;
-    }
-
-
-  
+  .home{margin-top:18px;text-align:center}
+  small.note{display:block;opacity:.72;text-align:center;margin:10px 0 0}
 </style>
 </head>
 <body>
@@ -167,12 +153,11 @@
       </ul>
     </article>
 
-    <!-- NATIVE FORM (no JS) -->
+    <!-- FORM (native POST; free plan friendly) -->
     <article class="card form-card">
       <h2>Request a Quote</h2>
 
       <form class="quote" action="https://formspree.io/f/mwpaevvb" method="POST" accept-charset="UTF-8">
-        <!-- Contact -->
         <div class="f-col-6">
           <label for="name">Your name *</label>
           <input id="name" name="name" type="text" required placeholder="First & last name" autocomplete="name">
@@ -182,7 +167,6 @@
           <input id="email" name="email" type="email" required placeholder="you@example.com" autocomplete="email">
         </div>
 
-        <!-- Project -->
         <div class="f-col-6">
           <label for="projectType">Project type *</label>
           <select id="projectType" name="project_type" required>
@@ -226,12 +210,8 @@
           <textarea id="notes" name="notes" placeholder="Tell us about the project, tone, cues you like…"></textarea>
         </div>
 
-        <!-- Meta -->
         <input type="hidden" name="_subject" value="Licensing Request — Quantaudio Studio">
-        <input type="hidden" name="_from" value="Quantaudio Studio Forms">
-        <!-- Honeypot for spam -->
         <input type="text" name="_gotcha" style="display:none">
-        <!-- Success redirect controlled in Formspree dashboard (set to /license-thanks.html) -->
 
         <div class="f-col-12 btnbar">
           <button class="btn" type="submit">Send Request</button>
@@ -242,6 +222,7 @@
       <small class="note">Not a legal agreement. Final terms provided on invoice/license. ™ denotes an unregistered mark.</small>
     </article>
   </section>
+
   <br>
   <nav class="btns" aria-label="Primary navigation" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:10px 0 0">
     <a class="btn" href="/">Home</a>
@@ -251,7 +232,6 @@
     <a class="btn" href="/press/">Press</a>
     <a class="btn" href="/about">About</a>
   </nav>
-  
 </main>
 </body>
 </html>
