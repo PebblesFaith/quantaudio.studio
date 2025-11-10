@@ -10,8 +10,25 @@
   body{margin:0;display:flex;align-items:center;justify-content:center;min-height:100%;
        font-family:system-ui,-apple-system,"Segoe UI",Roboto,Inter,Arial,sans-serif;color:var(--taupe);background:#fff}
   main{text-align:center;max-width:760px;padding:24px}
-  .brand{display:flex;justify-content:center;margin-bottom:10px}
-  .brand img{width:min(140px,45vw);height:auto;filter:drop-shadow(0 2px 6px rgba(0,0,0,.08))}
+  
+  /* Brand + ™ */
+    .brand { position: relative; margin: 0 auto 18px; }
+    .brand::after {
+      content: "™";
+      position: absolute; right: 6px; top: 6px;
+      font: 700 14px/1 system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+      color: var(--taupe); opacity: .92; pointer-events: none;
+    }
+    /* Full-bleed logo */
+    .brand img {
+      display: block;
+      width: 100vw;         /* span the viewport */
+      max-width: 2000px;    /* keep ultrawide sane */
+      height: auto;
+      margin-left: 50%;
+      transform: translateX(-50%); /* center the 100vw image */
+    }
+  
   h1{margin:6px 0 8px;font-size:clamp(28px,3.4vw,40px)}
   p{margin:0 auto 14px;max-width:60ch;line-height:1.6;font-size:18px}
   .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
