@@ -224,6 +224,14 @@
         <input type="hidden" name="_subject" value="Licensing Request — Quantaudio Studio">
         <input type="text" name="_gotcha" style="display:none">
 
+        <!-- Honeypot (leave blank) -->
+        <div class="hp" aria-hidden="true">
+          <label for="company">If you are human, leave this field blank</label>
+          <input id="company" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+        </div>
+      
+        <input type="hidden" name="_redirect" value="https://quantaudio.studio/license-thanks.html">
+
         <div class="f-col-12 btnbar">
           <button class="btn" type="submit">Send Request</button>
           <a class="btn" href="mailto:hello@quantaudio.studio?subject=Licensing%20Request%20-%20Quantaudio%20Studio">Email Instead</a>
@@ -233,14 +241,6 @@
       <small class="note">Not a legal agreement. Final terms provided on invoice/license. ™ denotes an unregistered mark.</small>
     </article>
   </section>
-
-  <!-- Honeypot (leave blank) -->
-  <div class="hp" aria-hidden="true">
-    <label for="company">If you are human, leave this field blank</label>
-    <input id="company" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
-  </div>
-
-  <input type="hidden" name="_redirect" value="https://quantaudio.studio/license-thanks.html">
 
   <br>
   <nav class="btns" aria-label="Primary navigation" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:10px 0 0">
