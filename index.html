@@ -58,13 +58,21 @@
 
     .lead { font-size: 18px; opacity: .9; margin: 4px 0 28px; }
 
-    nav.btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    :root { --taupe:#6F615D; }
     a.btn {
-      display: inline-block; padding: 12px 18px; border-radius: 999px;
-      border: 1.6px solid var(--taupe); color: var(--taupe); text-decoration: none;
-      transition: background .15s ease-in-out, color .15s ease-in-out, border-color .15s ease-in-out;
+      border:1.6px solid var(--taupe);
+      color: var(--taupe);
+      padding:12px 18px;
+      border-radius:999px;
+      text-decoration:none;
+      transition:background .15s,color .15s,border-color .15s;
     }
-    a.btn:hover, a.btn:focus { background: var(--taupe); color: #fff; outline: none; }
+    a.btn:hover,
+    a.btn:focus {
+      background: var(--taupe);
+      color: #fff !important; /* override inline color */
+      outline: none;
+    }
 
     footer { margin-top: 40px; font-size: 14px; opacity: .72; }
     @media (max-width: 640px) { .lead { font-size: 16px; } }
@@ -100,14 +108,13 @@
     <p class="lead">Scripture-Inspired. Cinematic.</p>
 
     <nav class="btns" aria-label="Primary navigation" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:10px 0 0">
-      <a class="btn" href="/"                 style="border:1.6px solid #6F615D;padding:12px 18px;border-radius:999px;color:#6F615D;text-decoration:none">Home</a>
-      <a class="btn" href="/license"          style="border:1.6px solid #6F615D;padding:12px 18px;border-radius:999px;color:#6F615D;text-decoration:none">License</a>
-      <a class="btn" href="/qa"               style="border:1.6px solid #6F615D;padding:12px 18px;border-radius:999px;color:#6F615D;text-decoration:none">QA</a>
-      <a class="btn" href="/links"            style="border:1.6px solid #6F615D;padding:12px 18px;border-radius:999px;color:#6F615D;text-decoration:none">Links</a>
-      <a class="btn" href="/press/"           style="border:1.6px solid #6F615D;padding:12px 18px;border-radius:999px;color:#6F615D;text-decoration:none">Press</a>
-      <a class="btn" href="/about"            style="border:1.6px solid #6F615D;padding:12px 18px;border-radius:999px;color:#6F615D;text-decoration:none">About</a>
-  </nav>
-
+      <a class="btn" href="/">Home</a>
+      <a class="btn" href="/license">License</a>
+      <a class="btn" href="/qa">QA</a>
+      <a class="btn" href="/links">Links</a>
+      <a class="btn" href="/press/">Press</a>
+      <a class="btn" href="/about">About</a>
+    </nav>
 
     <footer>© Quantaudio Studio</footer>
   </main>
