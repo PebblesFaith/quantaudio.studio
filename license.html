@@ -102,6 +102,17 @@
 
   .home{margin-top:18px;text-align:center}
   small.note{display:block;opacity:.72;text-align:center;margin:10px 0 0}
+
+  .hp {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  
 </style>
 </head>
 <body>
@@ -222,6 +233,12 @@
       <small class="note">Not a legal agreement. Final terms provided on invoice/license. ™ denotes an unregistered mark.</small>
     </article>
   </section>
+
+  <!-- Honeypot (leave blank) -->
+  <div class="hp" aria-hidden="true">
+    <label for="company">If you are human, leave this field blank</label>
+    <input id="company" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+  </div>
 
   <br>
   <nav class="btns" aria-label="Primary navigation" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:10px 0 0">
