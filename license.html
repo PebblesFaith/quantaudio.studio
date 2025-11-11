@@ -26,8 +26,22 @@
     main.wrap{width:100%; max-width:1100px; margin:40px auto; padding:0 16px 64px}
 
     /* Brand */
-    .brandlock{display:flex; align-items:center; justify-content:center; gap:16px; margin:6px auto 10px}
-    .brandlock img{width:min(140px,45vw); height:auto; display:block; filter:drop-shadow(0 2px 6px rgba(0,0,0,.08))}
+    .brandlock{
+      display:flex; align-items:center; justify-content:center;
+      margin: 8px auto 12px;
+      padding-inline: 8px;
+    }
+    .brandlock img{
+      display:block;
+      width: min(960px, 82vw);   /* hero-like on desktop, scales on mobile */
+      height: auto;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,.08));
+    }
+    
+    /* Optional: slightly smaller on very narrow phones */
+    @media (max-width: 380px){
+      .brandlock img{ width: 88vw; }
+    }
 
     /* Head */
     h1{margin:10px 0 6px; text-align:center; font-size:clamp(28px,3.4vw,38px)}
@@ -134,8 +148,8 @@
   <main class="wrap">
     <!-- Brand -->
     <div class="brandlock">
-      <img src="/quantaudio-logo.svg" alt="Quantaudio Studio logo"
-           onerror="this.onerror=null;this.src='/quantaudio-logo-wide.svg';">
+      <img src="/quantaudio-logo-wide.svg" alt="Quantaudio Studio logo"
+           onerror="this.onerror=null;this.src='/quantaudio-logo.svg';">
     </div>
 
     <h1>License Quantaudio Studio™</h1>
