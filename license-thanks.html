@@ -1,35 +1,279 @@
+<!-- license-thanks.html -->
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Thanks | Quantaudio Studio™</title>
-<meta name="theme-color" content="#6F615D">
-<style>
-  :root{ --taupe:#6F615D }
-  html,body{height:100%}
-  body{
-    margin:0;display:flex;align-items:center;justify-content:center;min-height:100%;
-    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Inter,Arial,sans-serif;color:var(--taupe);background:#fff;
-  }
-  main{max-width:760px;padding:24px 20px;text-align:center}
-  h1{margin:0 0 8px;font-size:clamp(28px,3.4vw,36px)}
-  p{margin:0 auto;max-width:60ch;line-height:1.6;font-size:18px}
-  .actions{margin-top:16px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-  a.btn{
-    display:inline-block;padding:10px 16px;border-radius:999px;text-decoration:none;
-    border:1.6px solid var(--taupe);color:var(--taupe)
-  }
-  a.btn:hover{background:var(--taupe);color:#fff}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Thank You — Quantaudio Studio™ Licensing</title>
+  <meta name="description" content="Thank you for submitting a Quantaudio Studio licensing request. We received your request and will reply by email." />
+  <link rel="canonical" href="https://quantaudio.studio/license-thanks.html" />
+  <meta name="theme-color" content="#6F615D" />
+
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <style>
+    :root {
+      --taupe: #6F615D;
+      --taupe-dark: #514642;
+      --paper: #FFFFFF;
+      --soft-paper: #F7F5F0;
+      --ink: #2B211A;
+      --muted: #746A66;
+      --line: rgba(111, 97, 93, 0.24);
+      --shadow: rgba(43, 33, 26, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+    }
+
+    body {
+      min-height: 100%;
+      margin: 0;
+      color: var(--taupe);
+      background:
+        radial-gradient(circle at top, rgba(111, 97, 93, 0.10), transparent 38%),
+        linear-gradient(180deg, #FFFFFF 0%, #F7F5F0 100%);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+    }
+
+    .page {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .site-header {
+      width: 100%;
+      padding: 22px 16px 10px;
+    }
+
+    .nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      border: 1.6px solid var(--taupe);
+      color: var(--taupe);
+      padding: 10px 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: background .15s, color .15s, border-color .15s;
+    }
+
+    .nav a:hover,
+    .nav a:focus {
+      background: var(--taupe);
+      color: #fff;
+      outline: none;
+    }
+
+    main {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 44px 16px 56px;
+    }
+
+    .thanks-card {
+      width: min(100%, 820px);
+      margin: 0 auto;
+      padding: clamp(28px, 5vw, 56px);
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: 0 24px 70px var(--shadow);
+      text-align: center;
+    }
+
+    .brand-logo {
+      width: min(100%, 560px);
+      margin: 0 auto 24px;
+    }
+
+    .brand-logo img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(2.1rem, 5vw, 3.75rem);
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+    }
+
+    .lead {
+      max-width: 660px;
+      margin: 20px auto 0;
+      color: var(--muted);
+      font-size: clamp(1.03rem, 2.3vw, 1.2rem);
+      line-height: 1.75;
+    }
+
+    .notice {
+      max-width: 660px;
+      margin: 24px auto 0;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--soft-paper);
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 18px;
+      border: 1.6px solid var(--taupe);
+      border-radius: 999px;
+      color: var(--taupe);
+      background: transparent;
+      text-decoration: none;
+      font-weight: 700;
+      transition: background .15s, color .15s, border-color .15s;
+    }
+
+    .button:hover,
+    .button:focus {
+      background: var(--taupe);
+      color: #fff;
+      outline: none;
+    }
+
+    .button.primary {
+      background: var(--taupe);
+      color: #fff;
+    }
+
+    .button.primary:hover,
+    .button.primary:focus {
+      background: var(--taupe-dark);
+      border-color: var(--taupe-dark);
+      color: #fff;
+    }
+
+    .site-footer {
+      padding: 0 16px 28px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      .site-header {
+        padding-top: 18px;
+      }
+
+      .nav {
+        gap: 10px;
+      }
+
+      .nav a {
+        padding: 9px 13px;
+        font-size: 0.9rem;
+      }
+
+      main {
+        padding-top: 28px;
+      }
+
+      .thanks-card {
+        border-radius: 24px;
+      }
+    }
+  </style>
 </head>
 <body>
-<main>
-  <h1>Thank you!</h1>
-  <p>Thanks — we received your request. We’ll reply to your email.</p>
-  <div class="actions">
-    <a class="btn" href="/license">Back to License</a>
-    <a class="btn" href="/">Home</a>
+  <div class="page">
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/radio/">Listen Live</a>
+        <a href="/license">License</a>
+        <a href="/qa">QA</a>
+        <a href="/links">Links</a>
+        <a href="/press/">Press</a>
+        <a href="/about">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="thanks-card" aria-labelledby="thanks-title">
+        <figure class="brand-logo" aria-label="Quantaudio Studio logo">
+          <img src="/quantaudio-logo-wide.svg" alt="Quantaudio Studio logo with musical motif"
+               onerror="this.onerror=null;this.src='/quantaudio-logo.svg';">
+        </figure>
+
+        <p class="eyebrow">Licensing Request Received</p>
+        <h1 id="thanks-title">Thank you!</h1>
+
+        <p class="lead">
+          Your Quantaudio Studio licensing request has been received.
+          We will review the project details and reply to the email address you provided.
+        </p>
+
+        <p class="notice">
+          This confirmation only verifies that the request was submitted.
+          Final licensing terms, permitted uses, pricing, and delivery details will be provided separately.
+        </p>
+
+        <div class="actions" aria-label="Next actions">
+          <a class="button primary" href="/license">
+            Back to License
+          </a>
+          <a class="button" href="/radio/">
+            Listen Live
+          </a>
+          <a class="button" href="/">
+            Home
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      © Quantaudio Studio™. All rights reserved.
+    </footer>
   </div>
-</main>
 </body>
 </html>
