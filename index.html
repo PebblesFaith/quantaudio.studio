@@ -1,11 +1,12 @@
 <!doctype html>
+<!-- index.html -->
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Quantaudio Studio™ — Scripture-Inspired. Cinematic.</title>
-  <meta name="description" content="Quantaudio Studio™ creates scripture-inspired cinematic music. Listen, license, and explore Bible-based QA prompts." />
+  <meta name="description" content="Quantaudio Studio™ creates scripture-inspired cinematic music. Listen live, license music, and explore Bible-based QA prompts." />
   <link rel="canonical" href="https://quantaudio.studio/" />
   <meta name="theme-color" content="#6F615D" />
 
@@ -14,71 +15,136 @@
   <link rel="manifest" href="/site.webmanifest" />
 
   <meta property="og:title" content="Quantaudio Studio™ — Scripture-Inspired. Cinematic." />
-  <meta property="og:description" content="Cinematic worship and devotional instrumentals. Listen, license, and explore QA prompts." />
+  <meta property="og:description" content="Cinematic worship and devotional instrumentals. Listen live, license music, and explore QA prompts." />
   <meta property="og:url" content="https://quantaudio.studio/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://quantaudio.studio/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <style>
-    :root { --taupe:#6F615D; --bg:#fff; }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
+    :root {
+      --taupe: #6F615D;
+      --bg: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
     body {
       margin: 0;
       color: var(--taupe);
       background: var(--bg);
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial, sans-serif;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    main.wrap { width: 100%; max-width: 1060px; padding: 48px 16px; text-align: center; }
+
+    main.wrap {
+      width: 100%;
+      max-width: 1060px;
+      padding: 48px 16px;
+      text-align: center;
+    }
 
     .visually-hidden {
-      position: absolute !important; height: 1px; width: 1px; overflow: hidden;
-      clip: rect(1px,1px,1px,1px); white-space: nowrap; border: 0; padding: 0; margin: -1px;
+      position: absolute !important;
+      height: 1px;
+      width: 1px;
+      overflow: hidden;
+      clip: rect(1px, 1px, 1px, 1px);
+      white-space: nowrap;
+      border: 0;
+      padding: 0;
+      margin: -1px;
     }
 
-    /* Brand + ™ */
-    .brand { position: relative; margin: 0 auto 18px; }
+    .brand {
+      position: relative;
+      margin: 0 auto 18px;
+    }
+
     .brand::after {
       content: "™";
-      position: absolute; right: 6px; top: 6px;
+      position: absolute;
+      right: 6px;
+      top: 6px;
       font: 700 14px/1 system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial, sans-serif;
-      color: var(--taupe); opacity: .92; pointer-events: none;
+      color: var(--taupe);
+      opacity: .92;
+      pointer-events: none;
     }
-    /* Full-bleed logo */
+
     .brand img {
       display: block;
-      width: 100vw;         /* span the viewport */
-      max-width: 2000px;    /* keep ultrawide sane */
+      width: 100vw;
+      max-width: 2000px;
       height: auto;
       margin-left: 50%;
-      transform: translateX(-50%); /* center the 100vw image */
+      transform: translateX(-50%);
     }
 
-    .lead { font-size: 18px; opacity: .9; margin: 4px 0 28px; }
+    .lead {
+      font-size: 18px;
+      opacity: .9;
+      margin: 4px 0 28px;
+    }
 
-    :root { --taupe:#6F615D; }
+    .btns {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 10px 0 0;
+    }
+
     a.btn {
-      border:1.6px solid var(--taupe);
+      border: 1.6px solid var(--taupe);
       color: var(--taupe);
-      padding:12px 18px;
-      border-radius:999px;
-      text-decoration:none;
-      transition:background .15s,color .15s,border-color .15s;
+      padding: 12px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: background .15s, color .15s, border-color .15s;
     }
+
     a.btn:hover,
     a.btn:focus {
       background: var(--taupe);
-      color: #fff !important; /* override inline color */
+      color: #fff !important;
       outline: none;
     }
 
-    footer { margin-top: 40px; font-size: 14px; opacity: .72; }
-    @media (max-width: 640px) { .lead { font-size: 16px; } }
+    a.btn-primary {
+      background: var(--taupe);
+      color: #fff;
+    }
+
+    a.btn-primary:hover,
+    a.btn-primary:focus {
+      background: #514642;
+      border-color: #514642;
+      color: #fff !important;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      opacity: .72;
+    }
+
+    @media (max-width: 640px) {
+      .lead {
+        font-size: 16px;
+      }
+    }
   </style>
 
-  <!-- JSON-LD (keep as valid JSON only) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -88,6 +154,7 @@
     "logo": "https://quantaudio.studio/quantaudio-logo-wide.svg",
     "email": "hello@quantaudio.studio",
     "sameAs": [
+      "https://zeno.fm/player/quantaudio-studio",
       "https://youtube.com/@QuantaudioStudio",
       "https://www.instagram.com/quantaudiostudio",
       "https://www.tiktok.com/@quantaudiostudio",
@@ -99,7 +166,6 @@
 <body>
   <main class="wrap">
     <figure class="brand" aria-label="Quantaudio Studio logo">
-      <!-- Use the wide asset if uploaded; otherwise swap to /quantaudio-logo.svg -->
       <img src="/quantaudio-logo-wide.svg" alt="Quantaudio Studio logo with musical motif"
            onerror="this.onerror=null;this.src='/quantaudio-logo-wide.png';">
     </figure>
@@ -107,8 +173,9 @@
     <h1 class="visually-hidden">Quantaudio Studio™</h1>
     <p class="lead">Scripture-Inspired. Cinematic.</p>
 
-    <nav class="btns" aria-label="Primary navigation" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:10px 0 0">
+    <nav class="btns" aria-label="Primary navigation">
       <a class="btn" href="/">Home</a>
+      <a class="btn btn-primary" href="https://zeno.fm/player/quantaudio-studio" target="_blank" rel="noopener">Listen Live</a>
       <a class="btn" href="/license">License</a>
       <a class="btn" href="/qa">QA</a>
       <a class="btn" href="/links">Links</a>
