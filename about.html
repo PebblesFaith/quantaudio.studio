@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <title>About | Quantaudio Studio™</title>
-  <meta name="description" content="About Quantaudio Studio — scripture-inspired cinematic music, Quantaudio Studio Radio, Bible-anchored QA prompts, and licensing information.">
+  <meta name="description" content="About Quantaudio Studio — founded and owned by Sarai Hannah Ajai, creating scripture-inspired cinematic music, Quantaudio Studio Radio, Bible-anchored QA prompts, and licensing information.">
   <link rel="canonical" href="https://quantaudio.studio/about">
   <meta name="theme-color" content="#6F615D">
 
@@ -19,6 +19,7 @@
       --note-gold: #D8B56A;
       --note-teal: #7FAE9B;
       --bg: #fff;
+      --muted: #746A66;
       --shadow: 0 6px 20px rgba(0, 0, 0, .06);
       --radius: 18px;
     }
@@ -80,6 +81,12 @@
         linear-gradient(120deg, var(--note-lav), #ffffff) border-box;
     }
 
+    .section.founder {
+      background:
+        linear-gradient(180deg, color-mix(in oklab, var(--note-teal) 14%, #fff) 0%, #fff 85%) padding-box,
+        linear-gradient(120deg, var(--note-teal), #ffffff) border-box;
+    }
+
     .section.radio {
       background:
         linear-gradient(180deg, color-mix(in oklab, var(--note-gold) 14%, #fff) 0%, #fff 85%) padding-box,
@@ -90,6 +97,51 @@
       background:
         linear-gradient(180deg, color-mix(in oklab, var(--note-blue) 14%, #fff) 0%, #fff 85%) padding-box,
         linear-gradient(120deg, var(--note-blue), #ffffff) border-box;
+    }
+
+    .founder-grid {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .founder-photo-wrap {
+      width: 190px;
+      height: 190px;
+      border: 1.6px solid rgba(111, 97, 93, .28);
+      border-radius: 28px;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(43, 33, 26, .08);
+      overflow: hidden;
+    }
+
+    .founder-photo-wrap img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .founder-photo-wrap.photo-missing::after {
+      content: "Founder Photo";
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 100%;
+      color: var(--muted);
+      font-weight: 700;
+      text-align: center;
+      padding: 16px;
+    }
+
+    .founder-kicker {
+      margin: 0 0 6px;
+      color: var(--muted);
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
     }
 
     h2 {
@@ -104,6 +156,17 @@
 
     ul {
       margin: 8px 0 0 18px;
+    }
+
+    .official-notice {
+      margin-top: 14px;
+      padding: 12px 14px;
+      border: 1px solid rgba(111, 97, 93, .28);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, .72);
+      color: var(--muted);
+      font-size: .95rem;
+      line-height: 1.6;
     }
 
     .actions,
@@ -154,12 +217,6 @@
       color: #fff !important;
     }
 
-    @media (max-width: 380px) {
-      .brandlock img {
-        width: 88vw;
-      }
-    }
-
     .site-footer {
       padding: 0 16px 28px;
       color: var(--muted);
@@ -167,8 +224,57 @@
       text-align: center;
     }
 
+    @media (max-width: 700px) {
+      .founder-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
 
+      .founder-photo-wrap {
+        margin: 0 auto;
+      }
+
+      .founder .actions {
+        justify-content: center;
+      }
+
+      .official-notice {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .brandlock img {
+        width: 88vw;
+      }
+
+      .founder-photo-wrap {
+        width: 170px;
+        height: 170px;
+      }
+    }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Quantaudio Studio",
+    "url": "https://quantaudio.studio/",
+    "founder": {
+      "@type": "Person",
+      "name": "Sarai Hannah Ajai",
+      "jobTitle": "Founder and Owner"
+    },
+    "sameAs": [
+      "https://quantaudio.studio/radio/",
+      "https://youtube.com/@QuantaudioStudio",
+      "https://www.instagram.com/quantaudiostudio",
+      "https://www.tiktok.com/@quantaudiostudio",
+      "https://www.patreon.com/QuantaudioStudio"
+    ]
+  }
+  </script>
 </head>
 <body>
   <main>
@@ -184,6 +290,47 @@
       Scripture-Inspired. Cinematic. Quantaudio Studio creates Bible-anchored cinematic instrumentals
       designed for prayer, study, reflection, worship settings, creative projects, and peaceful listening.
     </p>
+
+    <section class="section founder" aria-labelledby="founder-title">
+      <div class="founder-grid">
+        <div class="founder-photo-wrap">
+          <img src="/assets/sarai-hannah-ajai-founder.jpg"
+               alt="Sarai Hannah Ajai, Founder and Owner of Quantaudio Studio"
+               onerror="this.onerror=null;this.remove();this.closest('.founder-photo-wrap').classList.add('photo-missing');">
+        </div>
+
+        <div>
+          <p class="founder-kicker">Founder & Owner</p>
+          <h2 id="founder-title">Sarai Hannah Ajai</h2>
+
+          <p>
+            Sarai Hannah Ajai is the founder and owner of Quantaudio Studio™, the official creative
+            studio behind Quantaudio Studio Radio, scripture-inspired cinematic instrumentals,
+            devotional soundscapes, Bible-anchored QA prompts, and licensing-ready music sessions.
+          </p>
+
+          <p>
+            Her background includes accounting, software-development study, technical product building,
+            and faith-centered creative production. Through Quantaudio Studio, she develops original
+            music concepts, public web content, licensing pathways, brand materials, and listening
+            experiences designed for reflection, encouragement, and purposeful use.
+          </p>
+
+          <div class="official-notice">
+            Official notice: Quantaudio Studio™ is publicly represented through this website,
+            <strong>quantaudio.studio</strong>, and its linked official pages. Any licensing,
+            press, radio, or brand inquiry should be verified through the contact and links provided
+            on this website.
+          </div>
+
+          <div class="actions">
+            <a class="btn btn-primary" href="/radio/">Listen Live</a>
+            <a class="btn" href="/license">License Music</a>
+            <a class="btn" href="/press/">Press Kit</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="section">
       <h2>What “QA” Means</h2>
@@ -252,11 +399,10 @@
     </nav>
 
     <br>
+
     <footer class="site-footer">
       © Quantaudio Studio™. All rights reserved.
     </footer>
-
-    
 
   </main>
 </body>
