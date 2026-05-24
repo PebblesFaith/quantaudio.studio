@@ -1,161 +1,322 @@
 <!doctype html>
+<!-- press/index.html -->
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Press Kit | Quantaudio Studio™</title>
-<meta name="description" content="Press contact and fast facts for Quantaudio Studio. Request brand assets directly.">
-<link rel="canonical" href="https://quantaudio.studio/press/">
-<meta name="theme-color" content="#6F615D">
-<meta name="robots" content="noimageindex">
-<style>
-  :root{
-    --taupe:#6F615D;
-    --note-blue:#8FA8B8; --note-lav:#B9A9C9; --note-gold:#D8B56A; --note-teal:#7FAE9B;
-    --bg:#fff; --ring: color-mix(in oklab, var(--taupe) 65%, #fff);
-    --shadow:0 6px 20px rgba(0,0,0,.06); --radius:18px;
-  }
-  *{box-sizing:border-box}
-  html,body{height:100%}
-  body{margin:0;background:var(--bg);color:var(--taupe);
-       font-family:system-ui,-apple-system,"Segoe UI",Inter,Roboto,Arial,sans-serif;
-       display:flex;align-items:flex-start;justify-content:center}
-  main{width:100%;max-width:1100px;margin:40px auto;padding:0 16px 56px}
- 
-  .brandlock{
-  display:flex; align-items:center; justify-content:center;
-  margin: 8px auto 12px;
-  padding-inline: 8px;
-  }
-  .brandlock img{
-    display:block;
-    width: min(960px, 82vw);   /* hero-like on desktop, scales on mobile */
-    height: auto;
-    filter: drop-shadow(0 2px 6px rgba(0,0,0,.08));
-  }
-  
-  /* Optional: slightly smaller on very narrow phones */
-  @media (max-width: 380px){
-    .brandlock img{ width: 88vw; }
-  }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  h1{text-align:center;margin:10px 0 4px;font-size:clamp(28px,3.4vw,38px)}
-  p.lead{text-align:center;max-width:70ch;margin:0 auto 22px;opacity:.9}
-  .rule{width:min(720px,92%);margin:18px auto;height:10px;
-        background:radial-gradient(var(--taupe) 1px,transparent 2px) repeat-x;
-        background-size:12px 10px;background-position:center;opacity:.35}
-  .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;max-width:1100px;margin:22px auto 10px}
-  .col-6{grid-column:span 6}.col-12{grid-column:1 / -1}
-  @media (max-width:640px){.col-6,.col-12{grid-column:1 / -1}}
-  .card{border:1.6px solid transparent;border-radius:var(--radius);box-shadow:var(--shadow);
-        padding:20px;background:#fff}
-  .tinted-gold{background:linear-gradient(180deg,color-mix(in oklab,var(--note-gold)16%,#fff)0%,#fff 85%) padding-box,
-                         linear-gradient(120deg,var(--note-gold),#ffffff) border-box}
-  .tinted-blue{background:linear-gradient(180deg,color-mix(in oklab,var(--note-blue)16%,#fff)0%,#fff 85%) padding-box,
-                         linear-gradient(120deg,var(--note-blue),#ffffff) border-box}
-  .tinted-lav{background:linear-gradient(180deg,color-mix(in oklab,var(--note-lav)16%,#fff)0%,#fff 85%) padding-box,
-                         linear-gradient(120deg,var(--note-lav),#ffffff) border-box}
-  .tinted-teal{background:linear-gradient(180deg,color-mix(in oklab,var(--note-teal)16%,#fff)0%,#fff 85%) padding-box,
-                         linear-gradient(120deg,var(--note-teal),#ffffff) border-box}
-  h2{margin:0 0 8px;font-size:22px}
-  p{margin:8px 0 0;line-height:1.6}
-  ul{margin:8px 0 0 18px}
-  .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px;justify-content:flex-start}
-  .btn{display:inline-block;padding:10px 16px;border-radius:999px;text-decoration:none;
-       border:1.6px solid var(--taupe);color:var(--taupe);background:#fff;
-       transition:background .15s,color .15s,border-color .15s}
-  
-  .small{opacity:.75;font-size:.95rem}
-  .warn{background: #f9f2f0; border:1px solid color-mix(in oklab, var(--taupe) 40%, #fff); border-radius:12px; padding:10px 12px; margin-top:8px}
+  <title>Press Kit | Quantaudio Studio™</title>
+  <meta name="description" content="Press contact, fast facts, radio information, and brand guidance for Quantaudio Studio. Request brand assets directly.">
+  <link rel="canonical" href="https://quantaudio.studio/press/">
+  <meta name="theme-color" content="#6F615D">
+  <meta name="robots" content="noimageindex">
 
-  :root { --taupe:#6F615D; }
-  a.btn {
-    border:1.6px solid var(--taupe);
-    color: var(--taupe);
-    padding:12px 18px;
-    border-radius:999px;
-    text-decoration:none;
-    transition:background .15s,color .15s,border-color .15s;
-  }
-  a.btn:hover,
-  a.btn:focus {
-    background: var(--taupe);
-    color: #fff !important; /* override inline color */
-    outline: none;
-  }
+  <style>
+    :root {
+      --taupe: #6F615D;
+      --note-blue: #8FA8B8;
+      --note-lav: #B9A9C9;
+      --note-gold: #D8B56A;
+      --note-teal: #7FAE9B;
+      --bg: #fff;
+      --ring: color-mix(in oklab, var(--taupe) 65%, #fff);
+      --shadow: 0 6px 20px rgba(0, 0, 0, .06);
+      --radius: 18px;
+    }
 
-  
-</style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--taupe);
+      font-family: system-ui, -apple-system, "Segoe UI", Inter, Roboto, Arial, sans-serif;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    main {
+      width: 100%;
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 16px 56px;
+    }
+
+    .brandlock {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 8px auto 12px;
+      padding-inline: 8px;
+    }
+
+    .brandlock img {
+      display: block;
+      width: min(960px, 82vw);
+      height: auto;
+      filter: drop-shadow(0 2px 6px rgba(0, 0, 0, .08));
+    }
+
+    h1 {
+      text-align: center;
+      margin: 10px 0 4px;
+      font-size: clamp(28px, 3.4vw, 38px);
+    }
+
+    p.lead {
+      text-align: center;
+      max-width: 70ch;
+      margin: 0 auto 22px;
+      opacity: .9;
+    }
+
+    .rule {
+      width: min(720px, 92%);
+      margin: 18px auto;
+      height: 10px;
+      background: radial-gradient(var(--taupe) 1px, transparent 2px) repeat-x;
+      background-size: 12px 10px;
+      background-position: center;
+      opacity: .35;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px;
+      max-width: 1100px;
+      margin: 22px auto 10px;
+    }
+
+    .col-6 {
+      grid-column: span 6;
+    }
+
+    .col-12 {
+      grid-column: 1 / -1;
+    }
+
+    .card {
+      border: 1.6px solid transparent;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px;
+      background: #fff;
+    }
+
+    .tinted-gold {
+      background:
+        linear-gradient(180deg, color-mix(in oklab, var(--note-gold) 16%, #fff) 0%, #fff 85%) padding-box,
+        linear-gradient(120deg, var(--note-gold), #ffffff) border-box;
+    }
+
+    .tinted-blue {
+      background:
+        linear-gradient(180deg, color-mix(in oklab, var(--note-blue) 16%, #fff) 0%, #fff 85%) padding-box,
+        linear-gradient(120deg, var(--note-blue), #ffffff) border-box;
+    }
+
+    .tinted-lav {
+      background:
+        linear-gradient(180deg, color-mix(in oklab, var(--note-lav) 16%, #fff) 0%, #fff 85%) padding-box,
+        linear-gradient(120deg, var(--note-lav), #ffffff) border-box;
+    }
+
+    .tinted-teal {
+      background:
+        linear-gradient(180deg, color-mix(in oklab, var(--note-teal) 16%, #fff) 0%, #fff 85%) padding-box,
+        linear-gradient(120deg, var(--note-teal), #ffffff) border-box;
+    }
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+
+    p {
+      margin: 8px 0 0;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin: 8px 0 0 18px;
+    }
+
+    code {
+      color: #514642;
+      font-weight: 700;
+    }
+
+    .actions,
+    .btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .actions {
+      margin-top: 12px;
+      justify-content: flex-start;
+    }
+
+    .btns {
+      justify-content: center;
+      margin: 10px 0 0;
+    }
+
+    a.btn,
+    a.btn:link,
+    a.btn:visited {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      border: 1.6px solid var(--taupe);
+      color: var(--taupe);
+      background: #fff;
+      transition: background .15s, color .15s, border-color .15s;
+    }
+
+    a.btn:hover,
+    a.btn:focus {
+      background: var(--taupe);
+      color: #fff !important;
+      outline: none;
+    }
+
+    a.btn-primary,
+    a.btn-primary:link,
+    a.btn-primary:visited {
+      background: var(--taupe);
+      color: #fff;
+    }
+
+    a.btn-primary:hover,
+    a.btn-primary:focus {
+      background: #514642;
+      border-color: #514642;
+      color: #fff !important;
+    }
+
+    .small {
+      opacity: .75;
+      font-size: .95rem;
+    }
+
+    .warn {
+      background: #f9f2f0;
+      border: 1px solid color-mix(in oklab, var(--taupe) 40%, #fff);
+      border-radius: 12px;
+      padding: 10px 12px;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 640px) {
+      .col-6,
+      .col-12 {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .brandlock img {
+        width: 88vw;
+      }
+    }
+  </style>
 </head>
 <body>
-<main>
+  <main>
 
-  <!-- Brand -->
-  <div class="brandlock">
-    <img src="/quantaudio-logo-wide.svg" alt="Quantaudio Studio logo"
-         onerror="this.onerror=null;this.src='/quantaudio-logo.svg';">
-  </div>
-  
-  <h1>Press Kit</h1>
-  <p class="lead">Fast facts and press contact. For brand assets, please request a private link so we can ensure correct, up-to-date usage.</p>
+    <div class="brandlock">
+      <img src="/quantaudio-logo-wide.svg" alt="Quantaudio Studio logo"
+           onerror="this.onerror=null;this.src='/quantaudio-logo.svg';">
+    </div>
 
-  <div class="rule" aria-hidden="true"></div>
+    <h1>Press Kit</h1>
+    <p class="lead">
+      Fast facts, radio information, press contact, and brand guidance for Quantaudio Studio.
+      For brand assets, please request a private link so we can ensure correct, up-to-date usage.
+    </p>
 
-  <section class="grid" aria-label="press content">
-    <article class="card tinted-gold col-6">
-      <h2>Fast Facts</h2>
-      <ul>
-        <li><strong>Name:</strong> Quantaudio Studio</li>
-        <li><strong>Tagline:</strong> Scripture-Inspired. Cinematic.</li>
-        <li><strong>Series Highlight:</strong> <em>City on a Hill</em> (Sessions I – XXXII)</li>
-        <li><strong>Credit:</strong> “Music by Quantaudio Studio”</li>
-      </ul>
-      <div class="actions">
-        <a class="btn" href="/about">About</a>
-        <a class="btn" href="/qa">QA (denotes scriptural)</a>
-      </div>
-    </article>
+    <div class="rule" aria-hidden="true"></div>
 
-    <article class="card tinted-blue col-6">
-      <h2>Press Contact</h2>
-      <p>Email: <a class="btn" href="mailto:press@quantaudio.studio?subject=Press%20Inquiry%20-%20Quantaudio%20Studio">press@quantaudio.studio</a></p>
-      <div class="warn small">
-        Brand assets (logos/wordmark) are provided via a private link upon request.  
-        Include outlet, story context, deadlines, and placement.
-      </div>
-      <p class="small">© Quantaudio Studio. “™” denotes an unregistered mark.</p>
-    </article>
+    <section class="grid" aria-label="Press content">
+      <article class="card tinted-gold col-6">
+        <h2>Fast Facts</h2>
+        <ul>
+          <li><strong>Name:</strong> Quantaudio Studio</li>
+          <li><strong>Tagline:</strong> Scripture-Inspired. Cinematic.</li>
+          <li><strong>Radio:</strong> Quantaudio Studio Radio</li>
+          <li><strong>Series Highlight:</strong> <em>City on a Hill</em> — Sessions I – XXXII Including a Special Edition</li>
+          <li><strong>Credit:</strong> “Music by Quantaudio Studio”</li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-primary" href="/radio/">Listen Live</a>
+          <a class="btn" href="/about">About</a>
+          <a class="btn" href="/qa">QA — denotes scriptural</a>
+        </div>
+      </article>
 
-    <article class="card tinted-lav col-12">
-      <h2>Brand Guidance</h2>
-      <ul>
-        <li>Keep whitespace around the wordmark and motif.</li>
-        <li>Do not recolor the wordmark; use brand taupe <code>#6F615D</code> on light backgrounds.</li>
-        <li>For dark backgrounds, place the mark on a light chip or use an approved single-color version.</li>
-      </ul>
-    </article>
+      <article class="card tinted-blue col-6">
+        <h2>Press Contact</h2>
+        <p>
+          Email:
+          <a class="btn" href="mailto:press@quantaudio.studio?subject=Press%20Inquiry%20-%20Quantaudio%20Studio">
+            press@quantaudio.studio
+          </a>
+        </p>
+        <div class="warn small">
+          Brand assets, logos, and wordmark files are provided through a private link upon request.
+          Please include outlet name, story context, deadline, and intended placement.
+        </div>
+        <p class="small">© Quantaudio Studio™. “™” denotes an unregistered mark.</p>
+      </article>
 
-    <article class="card tinted-teal col-12">
-      <h2>Color Tokens</h2>
-      <ul>
-        <li>Taupe: <code>#6F615D</code> (primary)</li>
-        <li>Note Blue: <code>#8FA8B8</code> · Note Lavender: <code>#B9A9C9</code> · Note Gold: <code>#D8B56A</code> · Note Teal: <code>#7FAE9B</code></li>
-      </ul>
-      <p class="small">Accessibility tip: keep contrast ratio ≥ 4.5 for body text.</p>
-    </article>
-  </section>
+      <article class="card tinted-lav col-12">
+        <h2>Brand Guidance</h2>
+        <ul>
+          <li>Use the full name as <strong>Quantaudio Studio</strong>.</li>
+          <li>Keep whitespace around the wordmark and musical motif.</li>
+          <li>Do not recolor the wordmark without approval; use brand taupe <code>#6F615D</code> on light backgrounds.</li>
+          <li>For dark backgrounds, place the mark on a light chip or use an approved single-color version.</li>
+          <li>For small circular profile images, use the music-notes icon without adding the full wordmark inside the circle.</li>
+        </ul>
+      </article>
 
-  <br>
+      <article class="card tinted-teal col-12">
+        <h2>Color Tokens</h2>
+        <ul>
+          <li>Taupe: <code>#6F615D</code> — primary</li>
+          <li>Note Blue: <code>#8FA8B8</code></li>
+          <li>Note Lavender: <code>#B9A9C9</code></li>
+          <li>Note Gold: <code>#D8B56A</code></li>
+          <li>Note Teal: <code>#7FAE9B</code></li>
+        </ul>
+        <p class="small">Accessibility note: keep body-text contrast ratio at or above 4.5:1 where possible.</p>
+      </article>
+    </section>
 
-  <nav class="btns" aria-label="Primary navigation" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:10px 0 0">
-    <a class="btn" href="/">Home</a>
-    <a class="btn" href="/license">License</a>
-    <a class="btn" href="/qa">QA</a>
-    <a class="btn" href="/links">Links</a>
-    <a class="btn" href="/press/">Press</a>
-    <a class="btn" href="/about">About</a>
-  </nav>
+    <br>
 
-  
-</main>
+    <nav class="btns" aria-label="Primary navigation">
+      <a class="btn" href="/">Home</a>
+      <a class="btn" href="/radio/">Listen Live</a>
+      <a class="btn" href="/license">License</a>
+      <a class="btn" href="/qa">QA</a>
+      <a class="btn" href="/links">Links</a>
+      <a class="btn" href="/press/">Press</a>
+      <a class="btn" href="/about">About</a>
+    </nav>
+
+  </main>
 </body>
 </html>
